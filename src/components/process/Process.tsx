@@ -1,75 +1,143 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-import {
-  Lightbulb,
-  Palette,
-  Code2,
-  Rocket,
-} from "lucide-react";
+import ContactForm from "@/components/ContactForm";
 
 
+const values = [
+  {
+    title:"ИДЕИ",
+    text:"Создаём не просто проекты, а цифровые миры с характером.",
+  },
+  {
+    title:"ТЕХНОЛОГИИ",
+    text:"Используем современные инструменты разработки и дизайна.",
+  },
+  {
+    title:"КАЧЕСТВО",
+    text:"Каждая деталь проходит этапы проверки и улучшения.",
+  },
+];
 
-const steps = [
 
+const technologies = [
+  {
+    name:"NEXT.JS",
+    text:"Современная веб-разработка",
+  },
+  {
+    name:"UNITY",
+    text:"Разработка игровых проектов",
+  },
+  {
+    name:"BLENDER",
+    text:"3D модели и визуализация",
+  },
+  {
+    name:"FIGMA",
+    text:"UI / UX дизайн",
+  },
+];
+
+
+const process = [
   {
     number:"01",
     title:"ИДЕЯ",
-    tag:"DISCOVERY",
-    text:"Изучаем задачу, аудиторию и формируем направление проекта.",
-    icon:Lightbulb,
+    text:"Изучаем задачу, цели проекта и создаём направление.",
   },
-
   {
     number:"02",
     title:"КОНЦЕПЦИЯ",
-    tag:"CONCEPT",
-    text:"Создаём структуру, стиль и визуальную систему продукта.",
-    icon:Palette,
+    text:"Разрабатываем структуру, стиль и визуальную систему.",
   },
-
   {
     number:"03",
     title:"РАЗРАБОТКА",
-    tag:"CREATION",
-    text:"Превращаем идею в полноценный цифровой продукт.",
-    icon:Code2,
+    text:"Превращаем концепцию в полноценный цифровой продукт.",
   },
-
   {
     number:"04",
     title:"ЗАПУСК",
-    tag:"LAUNCH",
-    text:"Запускаем проект и продолжаем его развитие.",
-    icon:Rocket,
+    text:"Публикуем проект и продолжаем его развитие.",
   },
-
 ];
 
 
 
+const cardClass = `
+group
+relative
+overflow-hidden
+
+rounded-[40px]
+
+border
+border-white/20
+
+bg-[#111923]/90
+
+p-8
+
+transform-gpu
+
+transition-colors
+
+md:hover:border-white/50
+`;
 
 
-export default function Process(){
+
+export default function Studio(){
 
 
 return (
 
 <section
 
-id="process"
-
 className="
 relative
 overflow-hidden
+
 bg-transparent
+
 px-6
-py-8
+
+py-32
+
 md:px-12
+
 "
 
 >
+
+
+<div
+
+className="
+absolute
+
+left-1/2
+
+top-0
+
+h-[450px]
+
+w-[450px]
+
+-translate-x-1/2
+
+rounded-full
+
+bg-white/[0.05]
+
+blur-[100px]
+
+pointer-events-none
+
+"
+
+ />
 
 
 
@@ -77,28 +145,35 @@ md:px-12
 
 className="
 relative
+
 z-10
+
 mx-auto
-max-w-[1400px]
+
+max-w-[1200px]
+
 "
 
 >
 
 
+<motion.div
 
+initial={{
+opacity:0
+}}
 
+whileInView={{
+opacity:1
+}}
 
+viewport={{
+once:true
+}}
 
-
-{/* заголовок */}
-
-
-
-<div
-
-className="
-mb-16
-"
+transition={{
+duration:.6
+}}
 
 >
 
@@ -107,177 +182,155 @@ mb-16
 
 className="
 text-[11px]
-tracking-[0.7em]
-text-[#b08a52]
+
+tracking-[0.6em]
+
+text-[#D6A85F]
+
 "
 
 >
 
-КАК МЫ РАБОТАЕМ
+ABOUT AVELOR
 
 </p>
 
 
 
-
-
-<h2
+<h1
 
 className="
-mt-6
-max-w-[700px]
-text-4xl
+mt-8
+
+text-5xl
+
 font-light
+
 leading-tight
+
 text-white
 
-md:text-5xl
+md:text-7xl
+
 "
 
 >
 
-От идеи до готового
-цифрового продукта
+СОЗДАЁМ
 
-</h2>
+<br/>
+
+<span className="text-[#D6A85F]">
+
+ЦИФРОВЫЕ
+
+</span>
+
+<br/>
+
+МИРЫ
+
+</h1>
 
 
 
-</div>
+<p
+
+className="
+mt-10
+
+max-w-[600px]
+
+text-lg
+
+leading-8
+
+text-white/60
+
+"
+
+>
+
+Avelor Studio — цифровая студия,
+которая объединяет разработку,
+дизайн и технологии для создания
+современных продуктов.
+
+</p>
 
 
+</motion.div>
 
 
-
-
-
-
-
-{/* этапы */}
 
 
 
 <div
 
 className="
+mt-24
+
 grid
-grid-cols-1
+
 gap-8
 
-md:grid-cols-2
+md:grid-cols-3
+
 "
 
 >
 
 
-{
-
-steps.map((step,index)=>{
-
-
-const Icon = step.icon;
-
-
-
-return (
+{values.map((item,index)=>(
 
 
 <motion.div
 
-
-
-
-key={step.number}
-
+key={item.title}
 
 
 initial={{
-
-opacity:0,
-y:50
-
+opacity:0
 }}
-
-
 
 whileInView={{
-
-opacity:1,
-y:0
-
+opacity:1
 }}
-
-
 
 viewport={{
-
-once:true
-
+once:true,
+amount:.2
 }}
-
-
 
 transition={{
-
-duration:.7,
-delay:index*.1
-
+duration:.5,
+delay:index*.05
 }}
 
 
-
-whileHover={{
-
-y:-12
-
-}}
-
-
-
-className="
-group
-relative
-min-h-[260px]
-
-overflow-hidden
-
-rounded-[45px]
-
-border
-border-[#c49a5a]/25
-
-bg-gradient-to-br
-from-white/[0.14]
-via-white/[0.07]
-to-transparent
-
-p-10
-
-backdrop-blur-2xl
-
-transition-all
-
-hover:border-[#c49a5a]/70
-
-hover:shadow-[0_0_80px_rgba(196,154,90,0.2)]
-"
+className={cardClass}
 
 >
-
 
 
 <div
 
 className="
 absolute
-inset-0
 
-rounded-[inherit]
+right-[-70px]
 
-border
-border-white/20
+top-[-70px]
 
-shadow-[inset_0_0_40px_rgba(255,255,255,0.12)]
+h-[220px]
+
+w-[220px]
+
+rounded-full
+
+bg-white/10
+
+blur-[70px]
 
 pointer-events-none
 
@@ -287,30 +340,518 @@ pointer-events-none
 
 
 
-{/* внутреннее свечение */}
+<div
+
+className="
+relative
+
+z-10
+
+"
+
+>
+
+
+<h3
+
+className="
+text-sm
+
+tracking-[0.35em]
+
+text-[#D6A85F]
+
+"
+
+>
+
+{item.title}
+
+</h3>
+
+
+
+<p
+
+className="
+mt-6
+
+leading-7
+
+text-white/60
+
+"
+
+>
+
+{item.text}
+
+</p>
+
+
+</div>
+
+
+</motion.div>
+
+
+))}
+
+
+</div>
+
+{/* TECHNOLOGIES */}
+
+
+<motion.div
+
+initial={{
+opacity:0
+}}
+
+whileInView={{
+opacity:1
+}}
+
+viewport={{
+once:true
+}}
+
+transition={{
+duration:.6
+}}
+
+className="
+mt-32
+"
+
+>
+
+
+<p
+
+className="
+text-[11px]
+
+tracking-[0.6em]
+
+text-[#D6A85F]
+
+"
+
+>
+
+TECHNOLOGIES
+
+</p>
+
+
+
+<h2
+
+className="
+mt-6
+
+text-4xl
+
+font-light
+
+text-white
+
+md:text-5xl
+
+"
+
+>
+
+НАШ
+
+<br/>
+
+<span className="text-[#D6A85F]">
+
+СТЕК
+
+</span>
+
+</h2>
+
 
 
 
 <div
 
 className="
+mt-12
+
+grid
+
+gap-6
+
+sm:grid-cols-2
+
+lg:grid-cols-4
+
+"
+
+>
+
+
+{technologies.map((item,index)=>(
+
+
+<motion.div
+
+
+key={item.name}
+
+
+initial={{
+opacity:0
+}}
+
+
+whileInView={{
+opacity:1
+}}
+
+
+viewport={{
+once:true,
+amount:.2
+}}
+
+
+transition={{
+duration:.5,
+delay:index*.05
+}}
+
+
+className="
+group
+
+relative
+
+overflow-hidden
+
+
+rounded-[35px]
+
+
+border
+
+border-white/20
+
+
+bg-[#111923]/90
+
+
+p-8
+
+
+transform-gpu
+
+
+transition-colors
+
+
+md:hover:border-white/50
+
+"
+
+>
+
+
+<div
+
+className="
 absolute
-right-[-80px]
-top-[-80px]
-h-[250px]
-w-[250px]
+
+right-[-60px]
+
+top-[-60px]
+
+
+h-[180px]
+
+w-[180px]
+
+
 rounded-full
 
-bg-[#b08a52]/20
 
-blur-[90px]
+bg-white/10
 
-opacity-0
 
-transition
-duration-500
+blur-[60px]
 
-group-hover:opacity-100
+
+pointer-events-none
+
+"
+
+/>
+
+
+
+<div
+
+className="
+relative
+
+z-10
+
+"
+
+>
+
+
+<h3
+
+className="
+text-lg
+
+tracking-[0.25em]
+
+text-white
+
+"
+
+>
+
+{item.name}
+
+</h3>
+
+
+
+<p
+
+className="
+mt-4
+
+text-sm
+
+text-white/50
+
+"
+
+>
+
+{item.text}
+
+</p>
+
+
+</div>
+
+
+</motion.div>
+
+
+))}
+
+
+</div>
+
+
+</motion.div>
+
+
+
+
+
+
+
+{/* PROCESS */}
+
+
+
+<motion.div
+
+initial={{
+opacity:0
+}}
+
+whileInView={{
+opacity:1
+}}
+
+viewport={{
+once:true
+}}
+
+transition={{
+duration:.6
+}}
+
+className="
+mt-32
+"
+
+>
+
+
+<p
+
+className="
+text-[11px]
+
+tracking-[0.6em]
+
+text-[#D6A85F]
+
+"
+
+>
+
+PROCESS
+
+</p>
+
+
+
+<h2
+
+className="
+mt-6
+
+text-4xl
+
+font-light
+
+text-white
+
+md:text-5xl
+
+"
+
+>
+
+КАК МЫ
+
+<br/>
+
+<span className="text-[#D6A85F]">
+
+РАБОТАЕМ
+
+</span>
+
+</h2>
+
+
+
+
+
+<div
+
+className="
+mt-12
+
+grid
+
+gap-6
+
+md:grid-cols-2
+
+"
+
+>
+
+
+{process.map((item,index)=>(
+
+
+<motion.div
+
+
+key={item.number}
+
+
+initial={{
+opacity:0
+}}
+
+
+whileInView={{
+opacity:1
+}}
+
+
+viewport={{
+once:true,
+amount:.2
+}}
+
+
+transition={{
+duration:.5,
+delay:index*.05
+}}
+
+
+className="
+group
+
+relative
+
+overflow-hidden
+
+
+rounded-[40px]
+
+
+border
+
+border-white/20
+
+
+bg-[#111923]/90
+
+
+p-8
+
+
+transform-gpu
+
+
+transition-colors
+
+
+md:hover:border-white/60
+
+"
+
+>
+
+
+<div
+
+className="
+absolute
+
+right-[-70px]
+
+top-[-70px]
+
+
+h-[220px]
+
+w-[220px]
+
+
+rounded-full
+
+
+bg-white/10
+
+
+blur-[70px]
+
+
+pointer-events-none
 
 "
 
@@ -319,7 +860,30 @@ group-hover:opacity-100
 
 
 
+<div
 
+className="
+absolute
+
+right-5
+
+top-[-10px]
+
+
+text-[110px]
+
+font-light
+
+
+text-white/[0.04]
+
+"
+
+>
+
+{item.number}
+
+</div>
 
 
 
@@ -328,97 +892,39 @@ group-hover:opacity-100
 
 className="
 relative
+
 z-10
-flex
-justify-between
-"
-
->
-
-
-
-
-
-<div>
-
-
-
-
-
-
-<div
-
-className="
-flex
-h-14
-w-14
-items-center
-justify-center
-
-rounded-2xl
-
-bg-[#b08a52]/10
-
-border
-
-border-[#b08a52]/30
 
 "
 
 >
-
-
-<Icon
-
-size={28}
-
-strokeWidth={1}
-
-className="
-text-[#b08a52]
-"
-
-/>
-
-
-</div>
-
-
-
-
-
 
 
 <p
 
 className="
-mt-8
 text-[10px]
 
-tracking-[0.6em]
+tracking-[0.5em]
 
-text-[#b08a52]
+text-[#D6A85F]
 
 "
 
 >
 
-{step.tag}
+STEP {item.number}
 
 </p>
-
-
-
-
 
 
 
 <h3
 
 className="
-mt-4
+mt-6
 
-text-3xl
+text-2xl
 
 font-light
 
@@ -428,12 +934,9 @@ text-white
 
 >
 
-{step.title}
+{item.title}
 
 </h3>
-
-
-
 
 
 
@@ -443,10 +946,6 @@ text-white
 className="
 mt-5
 
-max-w-[400px]
-
-text-sm
-
 leading-7
 
 text-white/50
@@ -455,57 +954,120 @@ text-white/50
 
 >
 
-{step.text}
+{item.text}
 
 </p>
-
-
-
-
 
 
 </div>
 
 
+</motion.div>
+
+
+))}
+
+
+</div>
+
+
+</motion.div>
 
 
 
 
 
 
-<div
+
+{/* CONTACT */}
+
+
+
+<motion.div
+
+
+initial={{
+opacity:0
+}}
+
+
+whileInView={{
+opacity:1
+}}
+
+
+viewport={{
+once:true
+}}
+
+
+transition={{
+duration:.6
+}}
+
 
 className="
-text-[120px]
-font-light
-leading-none
 
-text-white/[0.04]
+mt-32
+
+relative
+
+overflow-hidden
+
+
+rounded-[50px]
+
+
+border
+
+border-white/20
+
+
+bg-[#111923]/90
+
+
+p-10
+
+
+md:p-16
+
+
+transform-gpu
 
 "
 
 >
 
-{step.number}
 
-</div>
+<div
 
+className="
+absolute
 
+right-[-130px]
 
-
-
-
-</div>
-
+top-[-130px]
 
 
+h-[320px]
+
+w-[320px]
 
 
+rounded-full
 
 
+bg-[#D6A85F]/15
 
 
-{/* линия */}
+blur-[80px]
+
+
+pointer-events-none
+
+"
+
+/>
 
 
 
@@ -513,20 +1075,27 @@ text-white/[0.04]
 
 className="
 absolute
-bottom-0
-left-0
 
-h-[3px]
+left-[-100px]
 
-w-0
+bottom-[-100px]
 
-bg-[#b08a52]
 
-transition-all
+h-[250px]
 
-duration-700
+w-[250px]
 
-group-hover:w-full
+
+rounded-full
+
+
+bg-white/[0.05]
+
+
+blur-[70px]
+
+
+pointer-events-none
 
 "
 
@@ -536,37 +1105,121 @@ group-hover:w-full
 
 
 
+<div
+
+className="
+relative
+
+z-10
+
+max-w-[700px]
+
+"
+
+>
+
+
+<p
+
+className="
+text-[11px]
+
+tracking-[0.6em]
+
+text-[#D6A85F]
+
+"
+
+>
+
+START PROJECT
+
+</p>
+
+
+
+
+<h2
+
+className="
+mt-8
+
+text-4xl
+
+font-light
+
+leading-tight
+
+text-white
+
+md:text-6xl
+
+"
+
+>
+
+ГОТОВЫ
+
+<br/>
+
+СОЗДАТЬ
+
+<br/>
+
+<span className="text-[#D6A85F]">
+
+ЧТО-ТО ВЕЛИКОЕ?
+
+</span>
+
+</h2>
+
+
+
+
+<p
+
+className="
+mt-8
+
+max-w-[500px]
+
+leading-7
+
+text-white/60
+
+"
+
+>
+
+Расскажите нам о вашей идее,
+и мы поможем превратить её
+в полноценный цифровой продукт.
+
+</p>
+
+
+
+
+<div className="mt-10">
+
+<ContactForm />
+
+</div>
+
+
+
+</div>
 
 
 </motion.div>
 
 
-)
-
-
-})
-
-
-}
-
-
-
 </div>
-
-
-
-
-
-
-
-</div>
-
-
-
-
 
 
 </section>
+
 
 );
 

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import ContactForm from "@/components/ContactForm";
 
+
 const values = [
   {
     title:"ИДЕИ",
@@ -17,6 +18,7 @@ const values = [
     text:"Каждая деталь проходит этапы проверки и улучшения.",
   },
 ];
+
 
 const technologies = [
   {
@@ -36,6 +38,7 @@ const technologies = [
     text:"UI / UX дизайн",
   },
 ];
+
 
 const process = [
   {
@@ -60,299 +63,496 @@ const process = [
   },
 ];
 
+
+
 const cardStyle = `
+
 group
+
 relative
+
 overflow-hidden
+
 
 rounded-[40px]
 
+
 border
+
 border-white/20
 
-bg-gradient-to-br
-from-white/[0.16]
-via-white/[0.08]
-to-transparent
+
+
+bg-[#111923]/80
+
+
 
 p-8
 
-backdrop-blur-2xl
 
-shadow-[0_0_50px_rgba(255,255,255,0.10)]
 
-transition-all
+transform-gpu
 
-hover:border-white/50
 
-hover:shadow-[0_0_100px_rgba(255,255,255,0.25)]
+
+transition-colors
+
+
+md:hover:border-white/50
+
 `;
+
+
 
 const glowStyle = `
+
 absolute
+
 right-[-80px]
+
 top-[-80px]
 
-h-[260px]
-w-[260px]
+
+h-[220px]
+
+w-[220px]
+
 
 rounded-full
 
-bg-white/20
-
-blur-[110px]
-
-opacity-70
-`;
-
-export default function Studio(){
-
-return(
-
-<section
-className="
-relative
-overflow-hidden
-bg-transparent
-px-6
-py-32
-md:px-12
-"
->
-
-<div
-className="
-absolute
-left-1/2
-top-0
-
-h-[600px]
-w-[600px]
-
--translate-x-1/2
-
-rounded-full
 
 bg-white/10
 
-blur-[180px]
+
+blur-[70px]
+
+pointer-events-none
+
+`;
+
+
+
+export default function Studio(){
+
+
+return(
+
+
+<section
+
+className="
+
+relative
+
+overflow-hidden
+
+bg-transparent
+
+px-6
+
+py-32
+
+md:px-12
+
 "
-/>
+
+>
+
 
 
 <div
+
 className="
+
+absolute
+
+left-1/2
+
+top-0
+
+
+h-[500px]
+
+w-[500px]
+
+
+-translate-x-1/2
+
+
+rounded-full
+
+
+bg-white/[0.06]
+
+
+blur-[120px]
+
+
+transform-gpu
+
+"
+
+ />
+
+
+
+
+<div
+
+className="
+
 relative
+
 z-10
+
 
 mx-auto
 
+
 max-w-[1200px]
+
 "
+
 >
+
+
+
+
+
+{/* HERO */}
 
 
 <motion.div
 
+
 initial={{
-opacity:0,
-y:40
+
+opacity:0
+
 }}
 
-animate={{
-opacity:1,
-y:0
+
+whileInView={{
+
+opacity:1
+
 }}
+
+
+viewport={{
+
+once:true
+
+}}
+
 
 transition={{
-duration:1
+
+duration:.6
+
 }}
 
 >
 
+
+
 <p
+
 className="
+
 text-[11px]
+
 tracking-[0.6em]
+
 text-[#D6A85F]
+
 "
+
 >
+
 ABOUT AVELOR
+
 </p>
 
 
+
+
 <h1
+
 className="
+
 mt-8
+
 
 text-5xl
 
+
 font-light
+
 
 leading-tight
 
+
 text-white
 
+
 md:text-7xl
+
 "
+
 >
+
 
 СОЗДАЁМ
 
+
 <br/>
+
 
 <span className="text-[#D6A85F]">
+
 ЦИФРОВЫЕ
+
 </span>
+
 
 <br/>
 
+
 МИРЫ
+
 
 </h1>
 
 
+
+
 <p
+
 className="
+
 mt-10
+
 
 max-w-[600px]
 
+
 text-lg
+
 
 leading-8
 
+
 text-white/60
+
 "
+
 >
+
 Avelor Studio — цифровая студия,
 которая объединяет разработку,
 дизайн и технологии для создания
 современных продуктов.
+
 </p>
 
 
 </motion.div>
 
 
+
+
+
+{/* VALUES */}
+
+
+
 <div
+
 className="
+
 mt-24
+
 
 grid
 
+
 gap-8
 
+
 md:grid-cols-3
+
 "
+
 >
+
 
 {values.map((item,index)=>(
 
+
 <motion.div
+
 
 key={item.title}
 
+
 initial={{
-opacity:0,
-y:40
+
+opacity:0
+
 }}
+
 
 whileInView={{
-opacity:1,
-y:0
+
+opacity:1
+
 }}
+
 
 viewport={{
-once:true
+
+once:true,
+
+amount:.2
+
 }}
 
+
 transition={{
-duration:.7,
-delay:index*.15
+
+duration:.5,
+
+delay:index*.05
+
 }}
+
+
 
 className={cardStyle}
 
 >
 
+
 <div className={glowStyle}/>
 
 
+
 <div
+
 className="
+
 absolute
+
 inset-0
+
 
 rounded-[40px]
 
-bg-gradient-to-br
 
-from-white/10
+border
 
-to-transparent
+border-white/10
+
 
 pointer-events-none
+
 "
+
 />
 
 
-<div className="relative z-10">
+
+
+<div
+
+className="
+
+relative
+
+z-10
+
+"
+
+>
+
 
 <h3
+
 className="
+
 text-sm
+
 
 tracking-[0.35em]
 
+
 text-[#D6A85F]
+
 "
+
 >
+
 {item.title}
+
 </h3>
 
 
+
 <p
+
 className="
+
 mt-6
+
 
 leading-7
 
+
 text-white/60
+
 "
+
 >
+
 {item.text}
+
 </p>
 
 
 </div>
 
 
+
 </motion.div>
+
 
 ))}
 
 
+
 </div>
+
+{/* TECHNOLOGIES */}
+
 
 <motion.div
 
 initial={{
-opacity:0,
-y:50
+opacity:0
 }}
 
 whileInView={{
-opacity:1,
-y:0
+opacity:1
 }}
 
 viewport={{
-once:true
+once:true,
+amount:.2
 }}
 
 transition={{
-duration:.8
+duration:.6
 }}
 
 className="
@@ -361,18 +561,29 @@ mt-32
 
 >
 
+
 <p
+
 className="
 text-[11px]
+
 tracking-[0.6em]
+
 text-[#D6A85F]
+
 "
+
 >
+
 TECHNOLOGIES
+
 </p>
 
 
+
+
 <h2
+
 className="
 mt-6
 
@@ -383,7 +594,9 @@ font-light
 text-white
 
 md:text-5xl
+
 "
+
 >
 
 НАШ
@@ -391,14 +604,20 @@ md:text-5xl
 <br/>
 
 <span className="text-[#D6A85F]">
+
 СТЕК
+
 </span>
 
 </h2>
 
 
 
+
+
+
 <div
+
 className="
 mt-12
 
@@ -409,130 +628,178 @@ gap-6
 sm:grid-cols-2
 
 lg:grid-cols-4
+
 "
+
 >
+
 
 {technologies.map((item,index)=>(
 
 
 <motion.div
 
+
 key={item.name}
 
+
 initial={{
-opacity:0,
-y:30
+opacity:0
 }}
+
 
 whileInView={{
-opacity:1,
-y:0
+opacity:1
 }}
+
 
 viewport={{
-once:true
+once:true,
+amount:.2
 }}
+
 
 transition={{
-duration:.5,
-delay:index*.1
+duration:.45,
+delay:index*.05
 }}
 
-whileHover={{
-y:-10
-}}
+
 
 className="
+
 group
+
 relative
+
 overflow-hidden
+
 
 rounded-[35px]
 
+
 border
+
 border-white/20
 
-bg-gradient-to-br
 
-from-white/[0.16]
 
-via-white/[0.08]
+bg-[#111923]/80
 
-to-transparent
+
 
 p-8
 
-backdrop-blur-2xl
 
-shadow-[0_0_50px_rgba(255,255,255,0.10)]
 
-transition-all
+transform-gpu
 
-hover:border-white/50
 
-hover:shadow-[0_0_100px_rgba(255,255,255,0.25)]
+
+transition-colors
+
+
+md:hover:border-white/50
+
 "
 
 >
 
 
+
 <div
+
 className="
+
 absolute
+
 
 right-[-70px]
 
+
 top-[-70px]
+
 
 h-[220px]
 
+
 w-[220px]
+
 
 rounded-full
 
-bg-white/20
 
-blur-[100px]
+bg-white/10
 
-opacity-70
+
+blur-[70px]
+
+
+pointer-events-none
+
 "
+
 />
 
 
+
+
+
 <div
+
 className="
+
 relative
+
 z-10
+
 "
+
 >
 
+
 <h3
+
 className="
+
 text-lg
 
 tracking-[0.25em]
 
 text-white
+
 "
+
 >
+
 {item.name}
+
 </h3>
 
 
+
+
 <p
+
 className="
+
 mt-4
 
 text-sm
 
 text-white/50
+
 "
+
 >
+
 {item.text}
+
 </p>
 
 
 </div>
+
 
 
 </motion.div>
@@ -541,6 +808,7 @@ text-white/50
 ))}
 
 
+
 </div>
 
 
@@ -549,25 +817,32 @@ text-white/50
 
 
 
+
+
+
+{/* PROCESS */}
+
+
+
 <motion.div
 
 initial={{
-opacity:0,
-y:50
+opacity:0
 }}
 
 whileInView={{
-opacity:1,
-y:0
+opacity:1
 }}
 
 viewport={{
-once:true
+once:true,
+amount:.2
 }}
 
 transition={{
-duration:.8
+duration:.6
 }}
+
 
 className="
 mt-32
@@ -577,20 +852,27 @@ mt-32
 
 
 <p
+
 className="
 text-[11px]
 
 tracking-[0.6em]
 
 text-[#D6A85F]
+
 "
+
 >
+
 PROCESS
+
 </p>
 
 
 
+
 <h2
+
 className="
 mt-6
 
@@ -601,7 +883,9 @@ font-light
 text-white
 
 md:text-5xl
+
 "
+
 >
 
 КАК МЫ
@@ -609,7 +893,9 @@ md:text-5xl
 <br/>
 
 <span className="text-[#D6A85F]">
+
 РАБОТАЕМ
+
 </span>
 
 </h2>
@@ -617,7 +903,9 @@ md:text-5xl
 
 
 
+
 <div
+
 className="
 mt-12
 
@@ -626,7 +914,9 @@ grid
 gap-6
 
 md:grid-cols-2
+
 "
+
 >
 
 
@@ -639,105 +929,127 @@ md:grid-cols-2
 key={item.number}
 
 
+
 initial={{
-opacity:0,
-y:40
+opacity:0
 }}
+
 
 
 whileInView={{
-opacity:1,
-y:0
+opacity:1
 }}
+
 
 
 viewport={{
-once:true
+once:true,
+amount:.2
 }}
+
 
 
 transition={{
-duration:.6,
-delay:index*.15
+duration:.45,
+delay:index*.05
 }}
 
-
-whileHover={{
-y:-8
-}}
 
 
 className="
+
 group
+
 relative
+
 overflow-hidden
+
 
 rounded-[40px]
 
+
 border
+
 border-white/20
 
-bg-gradient-to-br
 
-from-white/[0.16]
+bg-[#111923]/80
 
-via-white/[0.08]
-
-to-transparent
 
 p-8
 
-backdrop-blur-2xl
 
-shadow-[0_0_50px_rgba(255,255,255,0.10)]
+transform-gpu
 
-transition-all
 
-hover:border-white/60
+transition-colors
 
-hover:shadow-[0_0_100px_rgba(255,255,255,0.25)]
+
+md:hover:border-white/60
+
+
 "
 
 >
 
 
+
 <div
+
 className="
+
 absolute
 
 right-[-80px]
 
 top-[-80px]
 
-h-[260px]
 
-w-[260px]
+h-[220px]
+
+
+w-[220px]
+
 
 rounded-full
 
-bg-white/20
 
-blur-[110px]
+bg-white/10
 
-opacity-70
+
+blur-[70px]
+
+
+pointer-events-none
+
 "
+
 />
 
 
+
+
 <div
+
 className="
+
 absolute
 
 right-5
 
 top-[-10px]
 
+
 text-[110px]
+
 
 font-light
 
+
 text-white/[0.04]
+
 "
+
 >
 
 {item.number}
@@ -745,31 +1057,48 @@ text-white/[0.04]
 </div>
 
 
+
+
+
 <div
+
 className="
 relative
 
 z-10
+
 "
+
 >
 
 
+
 <p
+
 className="
+
 text-[10px]
 
 tracking-[0.5em]
 
 text-[#D6A85F]
+
 "
+
 >
+
 STEP {item.number}
+
 </p>
 
 
 
+
+
 <h3
+
 className="
+
 mt-6
 
 text-2xl
@@ -777,28 +1106,41 @@ text-2xl
 font-light
 
 text-white
+
 "
+
 >
+
 {item.title}
+
 </h3>
 
 
 
+
+
 <p
+
 className="
+
 mt-5
 
 leading-7
 
 text-white/50
+
 "
+
 >
+
 {item.text}
+
 </p>
 
 
 
 </div>
+
 
 
 </motion.div>
@@ -810,145 +1152,216 @@ text-white/50
 </div>
 
 
+
 </motion.div>
+
+
+
+
+
+
+{/* CONTACT BLOCK */}
+
+
 
 <motion.div
 
+
 initial={{
-opacity:0,
-y:50
+opacity:0
 }}
+
 
 whileInView={{
-opacity:1,
-y:0
+opacity:1
 }}
+
 
 viewport={{
-once:true
+once:true,
+amount:.2
 }}
+
 
 transition={{
-duration:.8
+duration:.6
 }}
 
+
+
 className="
+
 mt-32
 
 relative
 
 overflow-hidden
 
+
 rounded-[50px]
 
+
 border
+
 border-white/20
 
-bg-gradient-to-br
 
-from-white/[0.16]
 
-via-white/[0.08]
+bg-[#111923]/90
 
-to-transparent
+
 
 p-10
 
+
 md:p-16
 
-backdrop-blur-2xl
 
-shadow-[0_0_60px_rgba(255,255,255,0.12)]
+transform-gpu
 
-hover:shadow-[0_0_120px_rgba(255,255,255,0.25)]
 "
 
 >
 
 
+
 <div
+
 className="
+
 absolute
 
 right-[-150px]
 
 top-[-150px]
 
-h-[400px]
 
-w-[400px]
+h-[350px]
+
+
+w-[350px]
+
 
 rounded-full
 
-bg-[#D6A85F]/20
 
-blur-[140px]
+bg-[#D6A85F]/15
+
+
+blur-[90px]
+
+
+pointer-events-none
+
 "
+
 />
 
 
 
+
+
 <div
+
 className="
+
 absolute
 
 left-[-120px]
 
+
 bottom-[-120px]
 
-h-[300px]
 
-w-[300px]
+h-[280px]
+
+
+w-[280px]
+
 
 rounded-full
 
-bg-white/10
 
-blur-[120px]
+bg-white/[0.05]
+
+
+blur-[80px]
+
+
+pointer-events-none
+
 "
+
 />
 
 
 
+
+
+
 <div
+
 className="
+
 relative
 
 z-10
 
+
 max-w-[700px]
+
 "
+
 >
 
 
 <p
+
 className="
+
 text-[11px]
+
 
 tracking-[0.6em]
 
+
 text-[#D6A85F]
+
 "
+
 >
+
 START PROJECT
+
 </p>
 
 
 
+
+
 <h2
+
 className="
+
 mt-8
+
 
 text-4xl
 
+
 font-light
+
 
 leading-tight
 
+
 text-white
 
+
 md:text-6xl
+
 "
+
 >
 
 ГОТОВЫ
@@ -960,48 +1373,68 @@ md:text-6xl
 <br/>
 
 <span className="text-[#D6A85F]">
+
 ЧТО-ТО ВЕЛИКОЕ?
+
 </span>
 
 </h2>
 
 
 
+
+
 <p
+
 className="
+
 mt-8
+
 
 max-w-[500px]
 
+
 leading-7
 
+
 text-white/60
+
 "
+
 >
+
 Расскажите нам о вашей идее,
 и мы поможем превратить её
 в полноценный цифровой продукт.
+
 </p>
 
 
 
+
 <div className="mt-10">
-  <ContactForm />
-</div>
 
-
+<ContactForm />
 
 </div>
+
+
+
+
+</div>
+
 
 
 
 </motion.div>
 
 
+
 </div>
 
 
 </section>
+
 
 );
 
