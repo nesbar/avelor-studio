@@ -416,7 +416,7 @@ export default function Hero() {
 
               fill
 
-              loading="lazy"
+              priority
 
               sizes="(max-width:768px) 90vw,900px"
 
