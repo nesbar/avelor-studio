@@ -156,12 +156,12 @@ max-w-[1200px]
 
 initial={{
 opacity:0,
-
+y:40
 }}
 
 animate={{
 opacity:1,
-
+y:0
 }}
 
 transition={{
@@ -255,12 +255,12 @@ key={item.title}
 
 initial={{
 opacity:0,
-
+y:40
 }}
 
 whileInView={{
 opacity:1,
-
+y:0
 }}
 
 viewport={{
@@ -339,12 +339,12 @@ text-white/60
 
 initial={{
 opacity:0,
-
+y:50
 }}
 
 whileInView={{
 opacity:1,
-
+y:0
 }}
 
 viewport={{
@@ -421,12 +421,12 @@ key={item.name}
 
 initial={{
 opacity:0,
-
+y:30
 }}
 
 whileInView={{
 opacity:1,
-
+y:0
 }}
 
 viewport={{
@@ -553,12 +553,12 @@ text-white/50
 
 initial={{
 opacity:0,
-
+y:50
 }}
 
 whileInView={{
 opacity:1,
-
+y:0
 }}
 
 viewport={{
@@ -641,13 +641,13 @@ key={item.number}
 
 initial={{
 opacity:0,
-
+y:40
 }}
 
 
 whileInView={{
 opacity:1,
-
+y:0
 }}
 
 
@@ -816,12 +816,12 @@ text-white/50
 
 initial={{
 opacity:0,
-
+y:50
 }}
 
 whileInView={{
 opacity:1,
-
+y:0
 }}
 
 viewport={{

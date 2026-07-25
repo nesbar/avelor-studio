@@ -174,14 +174,14 @@ export default function Portfolio(){
 
               initial={{
                 opacity:0,
-               
-                
+                y:50,
+                scale:.96
               }}
 
               whileInView={{
                 opacity:1,
-                
-                
+                y:0,
+                scale:1
               }}
 
               viewport={{
@@ -271,12 +271,12 @@ export default function Portfolio(){
                             <motion.div
                 initial={{
                   opacity:0,
-                  
+                  y:20
                 }}
 
                 whileInView={{
                   opacity:1,
-                  
+                  y:0
                 }}
 
                 viewport={{
