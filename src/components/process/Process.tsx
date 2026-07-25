@@ -192,45 +192,17 @@ key={step.number}
 
 
 initial={{
-
-opacity:0,
-
-
+opacity:0
 }}
-
-
 
 whileInView={{
-
-opacity:1,
-
-
+opacity:1
 }}
-
-
 
 viewport={{
-
 once:true
-
 }}
 
-
-
-transition={{
-
-duration:.7,
-delay:index*.1
-
-}}
-
-
-
-whileHover={{
-
-
-
-}}
 
 
 

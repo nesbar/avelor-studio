@@ -246,34 +246,17 @@ export default function Services(){
                 <motion.div
 
                   key={service.title}
+initial={{
+opacity:0
+}}
 
-                  initial={{
-                    opacity:0,
-              
-                    scale:.96
-                  }}
+whileInView={{
+opacity:1
+}}
 
-                  whileInView={{
-                    opacity:1,
-                    
-                    scale:1
-                  }}
-
-                  whileHover={{
-                   
-                    scale:1.03
-                  }}
-
-                  viewport={{
-                    once:true,
-                    amount:.2
-                  }}
-
-                  transition={{
-                    duration:.7,
-                    delay:index*.12,
-                    ease:"easeOut"
-                  }}
+viewport={{
+once:true
+}}
 
                   className={`
                   group
