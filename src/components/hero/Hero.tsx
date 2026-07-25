@@ -31,11 +31,10 @@ export default function Hero() {
     <section
 
       id="hero"
-
       className="
       relative
-      min-h-[100svh]
-      overflow-hidden
+      min-h-screen
+      overflow-visible
       bg-transparent
       mb-[-1px]
       "
