@@ -37,6 +37,7 @@ export default function Hero() {
       min-h-[100svh]
       overflow-hidden
       bg-transparent
+      mb-[-1px]
       "
 
     >
