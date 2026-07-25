@@ -222,9 +222,9 @@ export default function Hero() {
             <p
 
               className="
-              text-xs
+              text-[11px]
 
-              leading-6
+              leading-5
 
               text-[#F0ECE4]
 
@@ -261,7 +261,7 @@ export default function Hero() {
 
             relative
 
-            mt-8
+            mt-5
 
             inline-flex
 
@@ -336,58 +336,58 @@ export default function Hero() {
 
         <div
 
-        className="
-        absolute
+className="
+absolute
 
-        left-[18%]
+left-[12%]
 
-        top-[72%]
+top-[78%]
 
-        z-10
+z-10
 
-        pointer-events-none
-
-
-        h-[330px]
-
-        w-[330px]
+pointer-events-none
 
 
-        -translate-x-1/2
+h-[270px]
 
-        -translate-y-1/2
+w-[270px]
 
 
+-translate-x-1/2
 
-        sm:left-[30%]
-
-        sm:top-[68%]
-
-        sm:h-[450px]
-
-        sm:w-[450px]
+-translate-y-1/2
 
 
 
-        md:left-[55%]
+sm:left-[25%]
 
-        md:top-[58%]
+sm:top-[72%]
 
-        md:h-[700px]
+sm:h-[420px]
 
-        md:w-[700px]
+sm:w-[420px]
 
 
 
-        xl:top-[55%]
+md:left-[55%]
 
-        xl:h-[1050px]
+md:top-[58%]
 
-        xl:w-[1050px]
+md:h-[700px]
 
-        "
+md:w-[700px]
 
-      >
+
+
+xl:top-[55%]
+
+xl:h-[1050px]
+
+xl:w-[1050px]
+
+"
+
+>
 
 
 
