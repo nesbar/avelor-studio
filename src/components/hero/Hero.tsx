@@ -336,63 +336,58 @@ export default function Hero() {
 
         <div
 
+        className="
+        absolute
 
-          className="
+        left-[18%]
 
-          absolute
+        top-[72%]
 
+        z-10
 
-          left-[50%]
-
-          top-[52%]
-
-
-          z-10
+        pointer-events-none
 
 
-          pointer-events-none
+        h-[330px]
+
+        w-[330px]
 
 
-          h-[280px]
+        -translate-x-1/2
 
-          w-[280px]
-
-
-          -translate-x-1/2
-
-          -translate-y-1/2
+        -translate-y-1/2
 
 
 
+        sm:left-[30%]
 
-          sm:h-[450px]
+        sm:top-[68%]
 
-          sm:w-[450px]
+        sm:h-[450px]
 
-
-
-
-          md:left-[55%]
-
-          md:top-[58%]
-
-          md:h-[700px]
-
-          md:w-[700px]
+        sm:w-[450px]
 
 
 
+        md:left-[55%]
 
-          xl:top-[55%]
+        md:top-[58%]
 
-          xl:h-[1050px]
+        md:h-[700px]
 
-          xl:w-[1050px]
+        md:w-[700px]
 
 
-          "
 
-        >
+        xl:top-[55%]
+
+        xl:h-[1050px]
+
+        xl:w-[1050px]
+
+        "
+
+      >
 
 
 
