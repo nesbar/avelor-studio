@@ -194,7 +194,7 @@ key={step.number}
 initial={{
 
 opacity:0,
-y:50
+
 
 }}
 
@@ -203,7 +203,7 @@ y:50
 whileInView={{
 
 opacity:1,
-y:0
+
 
 }}
 
@@ -228,7 +228,7 @@ delay:index*.1
 
 whileHover={{
 
-y:-12
+
 
 }}
 
