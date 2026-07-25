@@ -174,13 +174,13 @@ export default function Portfolio(){
 
               initial={{
                 opacity:0,
-                y:50,
+               
                 scale:.96
               }}
 
               whileInView={{
                 opacity:1,
-                y:0,
+                
                 scale:1
               }}
 
@@ -196,7 +196,7 @@ export default function Portfolio(){
               }}
 
               whileHover={{
-                y:-12,
+                
                 scale:1.02
               }}
 

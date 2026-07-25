@@ -156,12 +156,12 @@ max-w-[1200px]
 
 initial={{
 opacity:0,
-y:40
+
 }}
 
 animate={{
 opacity:1,
-y:0
+
 }}
 
 transition={{
@@ -255,12 +255,12 @@ key={item.title}
 
 initial={{
 opacity:0,
-y:40
+
 }}
 
 whileInView={{
 opacity:1,
-y:0
+
 }}
 
 viewport={{

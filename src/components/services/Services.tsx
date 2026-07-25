@@ -249,18 +249,18 @@ export default function Services(){
 
                   initial={{
                     opacity:0,
-                    y:50,
+              
                     scale:.96
                   }}
 
                   whileInView={{
                     opacity:1,
-                    y:0,
+                    
                     scale:1
                   }}
 
                   whileHover={{
-                    y:-10,
+                   
                     scale:1.03
                   }}
 
