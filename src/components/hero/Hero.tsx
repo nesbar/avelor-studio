@@ -13,15 +13,15 @@ export default function Hero() {
 
   const textY = useTransform(
     scrollY,
-    [0, 600],
-    [0, -80]
+    [0,600],
+    [0,-80]
   );
 
 
   const textOpacity = useTransform(
     scrollY,
-    [0, 500],
-    [1, 0]
+    [0,500],
+    [1,0]
   );
 
 
@@ -34,10 +34,9 @@ export default function Hero() {
 
       className="
       relative
-      min-h-screen
-      overflow-visible
+      min-h-[100svh]
+      overflow-hidden
       bg-transparent
-      mb-[-1px]
       "
 
     >
@@ -53,7 +52,7 @@ export default function Hero() {
         relative
         z-20
         mx-auto
-        min-h-screen
+        min-h-[100svh]
         max-w-[1800px]
         "
 
@@ -64,8 +63,8 @@ export default function Hero() {
         {/* ТЕКСТ */}
 
 
-
         <motion.div
+
 
           initial={{
             opacity:0,
@@ -92,24 +91,30 @@ export default function Hero() {
 
           className="
           absolute
+
           left-5
-          top-[120px]
+          top-[90px]
+
           z-30
+
           w-[280px]
 
+
           sm:w-[300px]
+
 
           md:left-10
           md:top-1/2
           md:w-[300px]
           md:-translate-y-1/2
 
+
           xl:left-16
           xl:w-[360px]
+
           "
 
         >
-
 
 
           <p
@@ -135,18 +140,28 @@ export default function Hero() {
 
             className="
             mt-8
+
             text-[34px]
+
             font-light
+
             leading-[0.92]
+
             tracking-tight
+
             text-[#E8E2D8]
+
 
             sm:text-[38px]
 
+
             md:text-[48px]
 
+
             xl:mt-10
+
             xl:text-[62px]
+
             "
 
           >
@@ -165,26 +180,40 @@ export default function Hero() {
 
             <br />
 
+
             МИРЫ
 
 
           </h1>
 
-                    <div
+
+
+
+          <div
 
             className="
             mt-6
+
             max-w-[270px]
+
             rounded-xl
+
             bg-black/25
+
             px-4
+
             py-3
+
             backdrop-blur-sm
+
 
             md:max-w-[300px]
 
+
             xl:max-w-[330px]
+
             xl:mt-8
+
             "
 
           >
@@ -194,12 +223,18 @@ export default function Hero() {
 
               className="
               text-xs
+
               leading-6
+
               text-[#F0ECE4]
+
               drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]
 
+
               xl:text-sm
+
               xl:leading-7
+
               "
 
             >
@@ -221,23 +256,37 @@ export default function Hero() {
 
             href="#contact"
 
-
             className="
             group
+
             relative
+
             mt-8
+
             inline-flex
+
             overflow-hidden
+
             rounded-full
+
             border
+
             border-[#D4AE6A]/40
+
             bg-black/20
+
             px-9
+
             py-4
+
             text-[10px]
+
             tracking-[0.35em]
+
             text-[#E8E2D8]
+
             backdrop-blur-xl
+
             "
 
           >
@@ -247,11 +296,17 @@ export default function Hero() {
 
               className="
               absolute
+
               inset-0
+
               translate-x-[-100%]
+
               bg-[#D4AE6A]/20
+
               transition
+
               group-hover:translate-x-0
+
               "
 
             />
@@ -275,20 +330,21 @@ export default function Hero() {
 
 
 
-
         {/* ДРАКОН */}
 
 
 
         <div
 
+
           className="
 
           absolute
 
-          left-[52%]
 
-          top-[60%]
+          left-[50%]
+
+          top-[52%]
 
 
           z-10
@@ -297,11 +353,9 @@ export default function Hero() {
           pointer-events-none
 
 
+          h-[280px]
 
-          h-[360px]
-
-          w-[360px]
-
+          w-[280px]
 
 
           -translate-x-1/2
@@ -311,11 +365,9 @@ export default function Hero() {
 
 
 
+          sm:h-[450px]
 
-          sm:h-[520px]
-
-          sm:w-[520px]
-
+          sm:w-[450px]
 
 
 
@@ -331,12 +383,12 @@ export default function Hero() {
 
 
 
-
           xl:top-[55%]
 
           xl:h-[1050px]
 
           xl:w-[1050px]
+
 
           "
 
@@ -346,7 +398,9 @@ export default function Hero() {
 
           <motion.div
 
+
             animate={{
+
 
               y:[
                 0,
@@ -354,16 +408,20 @@ export default function Hero() {
                 0
               ],
 
+
               scale:[
                 1,
                 1.015,
                 1
               ]
 
+
             }}
 
 
+
             transition={{
+
 
               duration:8,
 
@@ -371,14 +429,20 @@ export default function Hero() {
 
               ease:"easeInOut"
 
+
             }}
+
 
 
             className="
             relative
+
             h-full
+
             w-full
+
             will-change-transform
+
             "
 
           >
@@ -389,40 +453,57 @@ export default function Hero() {
 
               className="
               absolute
+
               inset-[15%]
 
               rounded-full
 
+
               bg-gradient-to-r
+
 
               from-[#D4AE6A]/20
 
+
               via-[#E8E2D8]/10
+
 
               to-[#77858A]/20
 
-              blur-[130px]
+
+              blur-[100px]
+
               "
 
             />
 
 
 
+
+
             <Image
+
 
               src="/images/hero/hero-dragon1.webp"
 
+
               alt="Фэнтези дракон Avelor"
+
 
               fill
 
+
               priority
 
-              sizes="(max-width:768px) 90vw,900px"
+
+              sizes="(max-width:768px) 300px, 900px"
+
 
               className="
               object-contain
+
               drop-shadow-[0_0_120px_rgba(212,174,106,0.35)]
+
               "
 
             />
@@ -431,9 +512,15 @@ export default function Hero() {
           </motion.div>
 
 
+
         </div>
 
-                {/* СТАТИСТИКА */}
+
+
+
+
+
+        {/* СТАТИСТИКА */}
 
 
 
@@ -451,7 +538,6 @@ export default function Hero() {
           }}
 
 
-
           animate={{
 
             opacity:1,
@@ -463,14 +549,11 @@ export default function Hero() {
           }}
 
 
-
           transition={{
 
             duration:1,
 
-            delay:0.4,
-
-            ease:"easeOut"
+            delay:.4
 
           }}
 
@@ -483,24 +566,19 @@ export default function Hero() {
 
           right-2
 
-          top-[78%]
-
+          top-[70%]
 
 
           z-30
 
 
-
           w-[115px]
-
 
 
           -translate-y-1/2
 
 
-
           rounded-[30px]
-
 
 
           border
@@ -512,12 +590,10 @@ export default function Hero() {
           bg-white/[0.08]
 
 
-
           p-4
 
 
-
-          backdrop-blur-2xl
+          backdrop-blur-xl
 
 
 
@@ -529,10 +605,8 @@ export default function Hero() {
 
           md:w-[150px]
 
-          md:rounded-[40px]
 
           md:p-6
-
 
 
 
@@ -543,15 +617,12 @@ export default function Hero() {
 
           xl:w-[190px]
 
-          xl:rounded-[45px]
-
           xl:p-8
 
 
           "
 
         >
-
 
 
           {[
@@ -565,50 +636,12 @@ export default function Hero() {
           ].map((item,index)=>(
 
 
-
-            <motion.div
-
-
-              key={item[1]}
-
-
-              initial={{
-
-                opacity:0,
-
-                y:25
-
-              }}
-
-
-              animate={{
-
-                opacity:1,
-
-                y:0
-
-              }}
-
-
-              transition={{
-
-                duration:.7,
-
-                delay:.8 + index * .2,
-
-                ease:"easeOut"
-
-              }}
-
-
-            >
-
+            <div key={item[1]}>
 
 
               <p
 
                 className="
-
                 text-2xl
 
                 font-light
@@ -616,10 +649,7 @@ export default function Hero() {
                 text-[#E8E2D8]
 
 
-
                 md:text-4xl
-
-
 
                 xl:text-5xl
 
@@ -632,25 +662,14 @@ export default function Hero() {
               </p>
 
 
-
-
               <span
 
                 className="
-
                 text-[7px]
 
                 tracking-[0.4em]
 
                 text-[#D4AE6A]
-
-
-
-                md:text-[8px]
-
-
-
-                xl:text-[10px]
 
                 "
 
@@ -661,96 +680,38 @@ export default function Hero() {
               </span>
 
 
-
-
-
               {index !== 2 && (
 
-
-
-                <motion.div
-
-
-                  initial={{
-
-                    scaleX:0,
-
-                    opacity:0
-
-                  }}
-
-
-
-                  animate={{
-
-                    scaleX:1,
-
-                    opacity:1
-
-                  }}
-
-
-
-                  transition={{
-
-                    duration:.6,
-
-                    delay:1 + index*.2
-
-                  }}
-
-
+                <div
 
                   className="
-
                   my-4
 
                   h-px
 
-                  origin-left
-
-
-
                   bg-gradient-to-r
-
-
 
                   from-transparent
 
-
-
                   via-[#D4AE6A]/40
 
-
-
                   to-transparent
-
-
-
-
-
-                  md:my-6
-
-
-
-                  xl:my-8
 
                   "
 
                 />
 
-
               )}
 
 
-            </motion.div>
+            </div>
 
 
           ))}
 
 
-        </motion.div>
 
+        </motion.div>
 
 
 
@@ -761,6 +722,5 @@ export default function Hero() {
 
 
   );
-
 
 }
