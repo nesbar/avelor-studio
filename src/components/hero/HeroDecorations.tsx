@@ -12,7 +12,7 @@ export default function HeroDecorations() {
       absolute
       inset-0
       z-0
-      overflow-visible
+      overflow-hidden
       pointer-events-none
       "
     >
@@ -20,26 +20,36 @@ export default function HeroDecorations() {
 
       {/* ФИОЛЕТОВОЕ СВЕЧЕНИЕ */}
 
-      <div
+      <motion.div
+
+        animate={{
+          scale:[1,1.08,1]
+        }}
+
+        transition={{
+          duration:14,
+          repeat:Infinity,
+          ease:"easeInOut"
+        }}
+
         className="
         absolute
 
-        left-[15%]
+        left-[10%]
         top-[15%]
 
-        h-[450px]
-        w-[450px]
+        h-[400px]
+        w-[400px]
+
+        md:h-[700px]
+        md:w-[700px]
 
         rounded-full
 
         bg-[#8b5cff]/20
 
-        blur-[90px]
+        blur-[100px]
 
-        transform-gpu
-
-        md:h-[700px]
-        md:w-[700px]
         md:blur-[180px]
 
         "
@@ -47,43 +57,42 @@ export default function HeroDecorations() {
 
 
 
-      {/* ЗОЛОТОЕ СВЕЧЕНИЕ */}
+      {/* ЗОЛОТО */}
 
-      <div
+      <motion.div
+
+        animate={{
+          scale:[1,1.05,1]
+        }}
+
+        transition={{
+          duration:12,
+          repeat:Infinity,
+          ease:"easeInOut"
+        }}
+
         className="
         absolute
 
-        right-[-80px]
+        right-[5%]
+        top-[25%]
 
-        top-[35%]
+        h-[350px]
+        w-[350px]
 
-
-        h-[380px]
-
-        w-[380px]
-
+        md:h-[600px]
+        md:w-[600px]
 
         rounded-full
 
-
         bg-[#d6a85f]/20
 
-
-        blur-[90px]
-
-
-        transform-gpu
-
-
-        md:right-[5%]
-
-        md:h-[600px]
-
-        md:w-[600px]
+        blur-[100px]
 
         md:blur-[170px]
 
         "
+
       />
 
 
@@ -92,6 +101,7 @@ export default function HeroDecorations() {
       {/* НИЖНИЙ ТУМАН */}
 
       <div
+
         className="
         absolute
 
@@ -99,38 +109,28 @@ export default function HeroDecorations() {
 
         bottom-[-150px]
 
+        h-[450px]
 
-        h-[420px]
-
-        w-[420px]
-
-
-        rounded-full
-
-
-        bg-[#42c6d9]/15
-
-
-        blur-[100px]
-
-
-        transform-gpu
-
+        w-[450px]
 
         md:h-[650px]
 
         md:w-[650px]
 
-        md:blur-[180px]
+        rounded-full
+
+        bg-[#42c6d9]/15
+
+        blur-[120px]
 
         "
+
       />
 
 
 
 
-
-      {/* ОРБИТЫ ТОЛЬКО ПК */}
+      {/* ОРБИТА ТОЛЬКО ПК */}
 
       <motion.div
 
@@ -139,7 +139,7 @@ export default function HeroDecorations() {
         }}
 
         transition={{
-          duration:120,
+          duration:100,
           repeat:Infinity,
           ease:"linear"
         }}
@@ -154,19 +154,15 @@ export default function HeroDecorations() {
 
         top-[50%]
 
-
         h-[900px]
 
         w-[900px]
-
 
         -translate-x-1/2
 
         -translate-y-1/2
 
-
         rounded-full
-
 
         border
 
@@ -179,59 +175,20 @@ export default function HeroDecorations() {
 
 
 
+      {/* СТЕКЛЯННАЯ СФЕРА */}
 
       <motion.div
 
         animate={{
-          rotate:-360
+          y:[0,20,0]
         }}
 
         transition={{
-          duration:90,
+          duration:10,
           repeat:Infinity,
-          ease:"linear"
+          ease:"easeInOut"
         }}
 
-        className="
-        hidden
-        md:block
-
-        absolute
-
-        left-[55%]
-
-        top-[50%]
-
-
-        h-[650px]
-
-        w-[650px]
-
-
-        -translate-x-1/2
-
-        -translate-y-1/2
-
-
-        rounded-full
-
-
-        border
-
-        border-[#d6a85f]/20
-
-        "
-
-      />
-
-
-
-
-
-
-      {/* СФЕРА ТОЛЬКО ПК */}
-
-      <div
         className="
         hidden
         md:block
@@ -242,22 +199,19 @@ export default function HeroDecorations() {
 
         top-[18%]
 
-
         h-[230px]
 
         w-[230px]
 
-
         rounded-full
-
 
         border
 
         border-white/10
 
-
         bg-white/[0.02]
 
+        backdrop-blur-xl
 
         "
 
@@ -266,15 +220,35 @@ export default function HeroDecorations() {
 
 
 
-
-
-      {/* ЧАСТИЦЫ */}
+      {/* ЧАСТИЦЫ - меньше */}
 
       {Array.from({length:8}).map((_,i)=>(
 
-        <span
+        <motion.span
 
           key={i}
+
+          animate={{
+
+            y:[0,-50,0],
+
+            opacity:[
+              0.2,
+              0.7,
+              0.2
+            ]
+
+          }}
+
+          transition={{
+
+            duration:6,
+
+            repeat:Infinity,
+
+            delay:i*0.4
+
+          }}
 
           className="
           absolute
@@ -287,15 +261,13 @@ export default function HeroDecorations() {
 
           bg-[#d6a85f]
 
-          opacity-60
-
           "
 
           style={{
 
-            left:`${(i * 37) % 100}%`,
+            left:`${(i*37)%100}%`,
 
-            top:`${(i * 53) % 100}%`
+            top:`${(i*53)%100}%`
 
           }}
 
@@ -308,4 +280,5 @@ export default function HeroDecorations() {
     </div>
 
   );
+
 }

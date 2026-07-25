@@ -443,34 +443,23 @@ xl:w-[1050px]
           >
 
 
+<div
+className="
+absolute
+inset-[20%]
 
-            <div
+rounded-full
 
-              className="
-              absolute
+bg-[#D4AE6A]/25
 
-              inset-[15%]
+blur-[70px]
 
-              rounded-full
+md:blur-[130px]
 
+transform-gpu
 
-              bg-gradient-to-r
-
-
-              from-[#D4AE6A]/20
-
-
-              via-[#E8E2D8]/10
-
-
-              to-[#77858A]/20
-
-
-              blur-[100px]
-
-              "
-
-            />
+"
+/>
 
 
 
@@ -497,7 +486,7 @@ xl:w-[1050px]
               className="
               object-contain
 
-              drop-shadow-[0_0_120px_rgba(212,174,106,0.35)]
+              drop-shadow-[0_0_60px_rgba(212,174,106,0.35)]
 
               "
 
