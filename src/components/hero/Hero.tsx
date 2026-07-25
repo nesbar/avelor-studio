@@ -339,7 +339,7 @@ export default function Hero() {
 className="
 absolute
 
-left-[12%]
+left-[35%]
 
 top-[78%]
 
