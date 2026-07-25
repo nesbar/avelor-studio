@@ -54,6 +54,7 @@ const dots = [
 
 export default function Services(){
 
+
 return (
 
 <section
@@ -82,7 +83,6 @@ h-1
 w-1
 rounded-full
 bg-[#D6A85F]
-shadow-[0_0_20px_#D6A85F]
 "
 
 style={{
@@ -104,6 +104,7 @@ mx-auto
 max-w-[1500px]
 "
 >
+
 
 
 
@@ -131,7 +132,6 @@ tracking-[0.55em]
 text-[#c49a5a]
 
 md:text-[11px]
-md:tracking-[0.6em]
 "
 >
 ЧТО МЫ ДЕЛАЕМ
@@ -151,6 +151,7 @@ bg-[#c49a5a]/50
 
 
 
+
 <div
 className="
 text-left
@@ -161,13 +162,18 @@ text-white/30
 lg:text-right
 "
 >
+
 AVELOR
+
 <br/>
+
 DIGITAL SYSTEM
+
 </div>
 
 
 </div>
+
 
 
 
@@ -178,7 +184,6 @@ className="
 grid
 grid-cols-1
 gap-12
-items-start
 
 lg:grid-cols-[320px_1fr]
 "
@@ -196,12 +201,13 @@ leading-8
 text-white/60
 
 md:text-lg
-md:leading-9
 "
 >
+
 Создаём цифровые продукты,
 где дизайн встречается
 с технологиями.
+
 </p>
 
 
@@ -212,12 +218,12 @@ mt-6
 text-sm
 leading-7
 text-white/40
-
-md:mt-8
 "
 >
+
 От первой идеи
 до готового решения.
+
 </p>
 
 
@@ -228,15 +234,16 @@ mt-10
 text-[10px]
 tracking-[0.5em]
 text-[#c49a5a]
-
-md:mt-12
 "
 >
+
 2026 / DIGITAL LAB
+
 </div>
 
 
 </div>
+
 
 
 
@@ -255,6 +262,7 @@ md:gap-8
 >
 
 
+
 {services.map((service,index)=>{
 
 
@@ -263,32 +271,33 @@ const Icon = service.icon;
 
 return (
 
-
 <motion.div
+
 
 key={service.title}
 
 
 initial={{
-opacity:0
+opacity:0,
+y:20
 }}
 
 
 whileInView={{
-opacity:1
+opacity:1,
+y:0
 }}
 
 
 viewport={{
 once:true,
-amount:.2
+amount:0.2
 }}
 
 
 transition={{
-duration:.5,
-delay:index*.05,
-ease:"easeOut"
+duration:.45,
+delay:index*.05
 }}
 
 
@@ -301,6 +310,7 @@ relative
 
 h-[260px]
 
+
 overflow-hidden
 
 
@@ -312,33 +322,16 @@ border
 border-[#c49a5a]/25
 
 
-
-bg-gradient-to-br
-
-from-white/[0.14]
-
-via-white/[0.07]
-
-to-transparent
-
-
-
-md:backdrop-blur-2xl
-
+bg-[#111923]/80
 
 
 transform-gpu
 
 
-
-transition-all
-
+transition-colors
 
 
-hover:border-[#c49a5a]/70
-
-
-md:hover:shadow-[0_0_80px_rgba(196,154,90,0.2)]
+md:hover:border-[#c49a5a]/70
 
 
 `}
@@ -348,51 +341,22 @@ md:hover:shadow-[0_0_80px_rgba(196,154,90,0.2)]
 
 
 
-<div
-
-className="
-absolute
-
-right-[-80px]
-
-top-[-80px]
-
-h-64
-
-w-64
-
-rounded-full
-
-bg-[#D6A85F]/15
-
-blur-[80px]
-
-md:blur-[100px]
-
-"
-
- />
-
-
-
-
-
 
 <div
+
 className="
 relative
 z-10
 
 flex
-
 h-full
-
 flex-col
 
 p-7
 
 md:p-8
 "
+
 >
 
 
@@ -405,12 +369,11 @@ strokeWidth={1}
 
 className="
 text-[#e2c38a]
-
-md:h-9
-md:w-9
 "
 
 />
+
+
 
 
 
@@ -425,12 +388,8 @@ tracking-[0.25em]
 
 text-white
 
-
-md:mt-10
-
 md:text-sm
 
-md:tracking-[0.3em]
 "
 
 >
@@ -438,6 +397,8 @@ md:tracking-[0.3em]
 {service.title}
 
 </h3>
+
+
 
 
 
@@ -454,6 +415,7 @@ text-xs
 leading-6
 
 text-white/50
+
 "
 
 >
@@ -461,6 +423,7 @@ text-white/50
 {service.text}
 
 </p>
+
 
 
 
@@ -475,6 +438,7 @@ mt-auto
 flex
 
 justify-end
+
 "
 
 >
@@ -505,14 +469,6 @@ border-[#c49a5a]/40
 
 text-[#c49a5a]
 
-
-transition
-
-
-md:group-hover:bg-[#c49a5a]
-
-md:group-hover:text-[#071522]
-
 "
 
 >
@@ -527,8 +483,8 @@ md:group-hover:text-[#071522]
 
 
 
-
 </div>
+
 
 
 
@@ -546,7 +502,6 @@ left-8
 
 text-[80px]
 
-
 font-light
 
 
@@ -554,6 +509,7 @@ text-white/[0.05]
 
 
 md:text-[100px]
+
 "
 
 >
@@ -568,7 +524,6 @@ md:text-[100px]
 
 
 )
-
 
 })}
 
