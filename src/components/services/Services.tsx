@@ -86,7 +86,7 @@ export default function Services(){
           }}
           animate={{
             opacity:[0.3,1,0.3],
-            scale:[1,1.8,1],
+            
           }}
           transition={{
             duration:3+index,
@@ -246,17 +246,34 @@ export default function Services(){
                 <motion.div
 
                   key={service.title}
-initial={{
-opacity:0
-}}
 
-whileInView={{
-opacity:1
-}}
+                  initial={{
+                    opacity:0,
+              
+                    
+                  }}
 
-viewport={{
-once:true
-}}
+                  whileInView={{
+                    opacity:1,
+                    
+                    
+                  }}
+
+                  whileHover={{
+                   
+                    scale:1.03
+                  }}
+
+                  viewport={{
+                    once:true,
+                    amount:.2
+                  }}
+
+                  transition={{
+                    duration:.7,
+                    delay:index*.12,
+                    ease:"easeOut"
+                  }}
 
                   className={`
                   group

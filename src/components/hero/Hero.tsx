@@ -65,17 +65,13 @@ export default function Hero() {
 
         <motion.div
 
+        initial={{
+        opacity:0
+        }}
 
-          initial={{
-            opacity:0,
-            x:-40
-          }}
-
-
-          animate={{
-            opacity:1,
-            x:0
-          }}
+        animate={{
+        opacity:1
+        }}
 
 
           transition={{
@@ -512,24 +508,11 @@ transform-gpu
 
 
           initial={{
-
-            opacity:0,
-
-            x:40,
-
-            y:40
-
+          opacity:0
           }}
 
-
           animate={{
-
-            opacity:1,
-
-            x:0,
-
-            y:0
-
+          opacity:1
           }}
 
 

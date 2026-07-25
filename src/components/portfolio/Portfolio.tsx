@@ -70,20 +70,20 @@ export default function Portfolio(){
       >
 
         <motion.div
-          
           initial={{
-          opacity:0
+            opacity:0,
+            x:-40
           }}
-
           whileInView={{
-          opacity:1
+            opacity:1,
+            x:0
           }}
-
           viewport={{
-          once:true
+            once:true
           }}
-
-
+          transition={{
+            duration:.8
+          }}
           className="
           w-full
 
@@ -175,13 +175,13 @@ export default function Portfolio(){
               initial={{
                 opacity:0,
                
-                scale:.96
+                
               }}
 
               whileInView={{
                 opacity:1,
                 
-                scale:1
+                
               }}
 
               viewport={{
@@ -196,7 +196,7 @@ export default function Portfolio(){
               }}
 
               whileHover={{
-                
+                y:-12,
                 scale:1.02
               }}
 
@@ -271,12 +271,12 @@ export default function Portfolio(){
                             <motion.div
                 initial={{
                   opacity:0,
-                  y:20
+                  
                 }}
 
                 whileInView={{
                   opacity:1,
-                  y:0
+                  
                 }}
 
                 viewport={{
