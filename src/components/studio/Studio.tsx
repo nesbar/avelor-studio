@@ -804,7 +804,7 @@ group
 relative
 min-h-[260px]
 overflow-hidden
-rounded-[100px]
+rounded-[45px]
 border
 border-[#c49a5a]/25
 bg-gradient-to-br
@@ -812,6 +812,7 @@ from-white/[0.14]
 via-white/[0.07]
 to-transparent
 p-10
+md:p-16
 backdrop-blur-2xl
 transition-all
 hover:border-[#c49a5a]/70
