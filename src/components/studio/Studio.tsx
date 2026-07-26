@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import ContactForm from "@/components/ContactForm";
 
-
 const values = [
   {
     title:"ИДЕИ",
@@ -18,7 +17,6 @@ const values = [
     text:"Каждая деталь проходит этапы проверки и улучшения.",
   },
 ];
-
 
 const technologies = [
   {
@@ -38,7 +36,6 @@ const technologies = [
     text:"UI / UX дизайн",
   },
 ];
-
 
 const process = [
   {
@@ -64,276 +61,131 @@ const process = [
 ];
 
 
-
 const cardStyle = `
-
 group
-
 relative
-
 overflow-hidden
-
-
 rounded-[40px]
-
-
 border
-
 border-white/20
-
-
-
 bg-[#111923]/80
-
-
-
 p-8
-
-
-
 transform-gpu
-
-
-
 transition-colors
-
-
 md:hover:border-white/50
-
 `;
-
-
 
 const glowStyle = `
 
 absolute
-
 right-[-80px]
-
 top-[-80px]
-
-
 h-[220px]
-
 w-[220px]
-
-
 rounded-full
-
-
-bg-white/10
-
-
-blur-[70px]
-
+bg-[radial-gradient(circle,rgba(255,255,255,0.14)_0%,rgba(255,255,255,0.08)_35%,rgba(255,255,255,0)_75%)]
 pointer-events-none
-
 `;
 
-
-
 export default function Studio(){
-
-
 return(
-
-
 <section
-
 className="
-
 relative
-
 overflow-hidden
-
 bg-transparent
-
 px-6
-
 py-32
-
 md:px-12
-
 "
-
 >
-
-
 
 <div
 
 className="
-
 absolute
-
 left-1/2
-
 top-0
-
-
 h-[500px]
-
 w-[500px]
-
-
 -translate-x-1/2
-
-
 rounded-full
-
-
 bg-white/[0.06]
-
-
 blur-[120px]
-
-
 transform-gpu
-
 "
 
  />
 
-
-
-
 <div
 
 className="
-
 relative
-
 z-10
-
-
 mx-auto
-
-
 max-w-[1200px]
-
 "
 
 >
-
-
-
-
 
 {/* HERO */}
 
-
 <motion.div
-
-
-
-
-
 viewport={{
-
 once:true
-
 }}
-
-
 transition={{
-
 duration:.6
-
 }}
 
 >
-
-
-
 <p
 
 className="
-
 text-[11px]
-
 tracking-[0.6em]
-
 text-[#D6A85F]
-
 "
-
 >
 
 ABOUT AVELOR
 
 </p>
 
-
-
-
 <h1
 
 className="
-
 mt-8
-
-
 text-5xl
-
-
 font-light
-
-
 leading-tight
-
-
 text-white
-
-
 md:text-7xl
-
 "
-
 >
-
 
 СОЗДАЁМ
 
-
 <br/>
-
-
 <span className="text-[#D6A85F]">
 
 ЦИФРОВЫЕ
 
 </span>
-
-
 <br/>
-
 
 МИРЫ
 
-
 </h1>
-
-
-
 
 <p
 
 className="
-
 mt-10
-
-
 max-w-[600px]
-
-
 text-lg
-
-
 leading-8
-
-
 text-white/60
-
 "
 
 >
@@ -345,200 +197,111 @@ Avelor Studio — цифровая студия,
 
 </p>
 
-
 </motion.div>
-
-
-
-
 
 {/* VALUES */}
 
-
-
 <div
-
 className="
-
 mt-24
-
-
 grid
-
-
 gap-8
-
-
 md:grid-cols-3
-
 "
 
 >
 
-
 {values.map((item,index)=>(
 
-
 <motion.div
-
-
 key={item.title}
-
-
-
-
 viewport={{
-
 once:true,
-
 amount:.2
-
 }}
-
-
 transition={{
-
 duration:.5,
-
 delay:index*.05
-
 }}
-
-
-
 className={cardStyle}
 
 >
 
-
 <div className={glowStyle}/>
 
-
-
 <div
-
 className="
-
 absolute
-
 inset-0
-
-
 rounded-[40px]
-
-
 border
-
 border-white/10
-
-
 pointer-events-none
-
 "
 
 />
 
-
-
-
 <div
 
 className="
-
 relative
-
 z-10
-
 "
-
 >
-
 
 <h3
 
 className="
-
 text-sm
-
-
 tracking-[0.35em]
-
-
 text-[#D6A85F]
-
 "
 
 >
 
 {item.title}
-
 </h3>
-
-
 
 <p
 
 className="
-
 mt-6
-
-
 leading-7
-
-
 text-white/60
-
 "
 
 >
 
 {item.text}
-
 </p>
-
-
 </div>
-
-
 
 </motion.div>
 
-
 ))}
-
-
 
 </div>
 
 {/* TECHNOLOGIES */}
 
-
 <motion.div
-
-
 viewport={{
 once:true,
 amount:.2
 }}
-
 transition={{
 duration:.6
 }}
-
 className="
 mt-32
 "
-
 >
-
 
 <p
 
 className="
 text-[11px]
-
 tracking-[0.6em]
-
 text-[#D6A85F]
 
 "
@@ -549,22 +312,14 @@ TECHNOLOGIES
 
 </p>
 
-
-
-
 <h2
 
 className="
 mt-6
-
 text-4xl
-
 font-light
-
 text-white
-
 md:text-5xl
-
 "
 
 >
@@ -572,164 +327,82 @@ md:text-5xl
 НАШ
 
 <br/>
-
 <span className="text-[#D6A85F]">
 
 СТЕК
 
 </span>
-
 </h2>
-
-
-
-
-
 
 <div
 
 className="
 mt-12
-
 grid
-
 gap-6
-
 sm:grid-cols-2
-
 lg:grid-cols-4
-
 "
-
 >
 
-
 {technologies.map((item,index)=>(
-
-
 <motion.div
-
-
 key={item.name}
-
-
-
 
 viewport={{
 once:true,
 amount:.2
 }}
-
-
 transition={{
 duration:.45,
 delay:index*.05
 }}
 
-
-
 className="
-
 group
-
 relative
-
 overflow-hidden
-
-
 rounded-[35px]
-
-
 border
-
 border-white/20
-
-
-
 bg-[#111923]/80
-
-
-
 p-8
-
-
-
 transform-gpu
-
-
-
 transition-colors
-
-
 md:hover:border-white/50
-
 "
 
 >
 
-
-
 <div
 
 className="
-
 absolute
-
-
 right-[-70px]
-
-
 top-[-70px]
-
-
 h-[220px]
-
-
 w-[220px]
-
-
 rounded-full
-
-
-bg-white/10
-
-
-blur-[70px]
-
-
+bg-[radial-gradient(circle,rgba(255,255,255,0.14)_0%,rgba(255,255,255,0.08)_35%,rgba(255,255,255,0)_75%)]
 pointer-events-none
-
 "
 
 />
 
-
-
-
-
 <div
 
 className="
-
 relative
-
 z-10
-
 "
-
 >
-
 
 <h3
 
 className="
-
 text-lg
-
 tracking-[0.25em]
-
 text-white
-
 "
 
 >
@@ -963,7 +636,7 @@ rounded-full
 bg-white/10
 
 
-blur-[70px]
+radial-gradient
 
 
 pointer-events-none
@@ -1166,31 +839,14 @@ transform-gpu
 <div
 
 className="
-
 absolute
-
 right-[-150px]
-
 top-[-150px]
-
-
 h-[350px]
-
-
 w-[350px]
-
-
 rounded-full
-
-
-bg-[#D6A85F]/15
-
-
-blur-[90px]
-
-
+bg-[radial-gradient(circle,rgba(214,168,95,0.18)_0%,rgba(214,168,95,0.08)_45%,rgba(214,168,95,0)_80%)]
 pointer-events-none
-
 "
 
 />
@@ -1202,32 +858,14 @@ pointer-events-none
 <div
 
 className="
-
 absolute
-
 left-[-120px]
-
-
 bottom-[-120px]
-
-
 h-[280px]
-
-
 w-[280px]
-
-
 rounded-full
-
-
-bg-white/[0.05]
-
-
-blur-[80px]
-
-
+bg-[radial-gradient(circle,rgba(255,255,255,0.10)_0%,rgba(255,255,255,0.04)_40%,rgba(255,255,255,0)_80%)]
 pointer-events-none
-
 "
 
 />
@@ -1273,31 +911,15 @@ START PROJECT
 
 </p>
 
-
-
-
-
 <h2
 
 className="
-
 mt-8
-
-
 text-4xl
-
-
 font-light
-
-
 leading-tight
-
-
 text-white
-
-
 md:text-6xl
-
 "
 
 >
@@ -1309,34 +931,20 @@ md:text-6xl
 СОЗДАТЬ
 
 <br/>
-
 <span className="text-[#D6A85F]">
 
 ЧТО-ТО ВЕЛИКОЕ?
 
 </span>
-
 </h2>
-
-
-
-
 
 <p
 
 className="
-
 mt-8
-
-
 max-w-[500px]
-
-
 leading-7
-
-
 text-white/60
-
 "
 
 >
@@ -1347,32 +955,19 @@ text-white/60
 
 </p>
 
-
-
-
 <div className="mt-10">
 
 <ContactForm />
 
 </div>
 
-
-
-
 </div>
-
-
-
 
 </motion.div>
 
-
-
 </div>
 
-
 </section>
-
 
 );
 
