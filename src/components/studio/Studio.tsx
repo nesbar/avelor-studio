@@ -376,6 +376,7 @@ delay:index*.05
 }}
 
 className="
+
 group
 relative
 overflow-hidden
@@ -599,23 +600,37 @@ delay:index*.05
 
 
 className="
+
 group
+
 relative
+
 overflow-hidden
-rounded-[35px]
+
+
+rounded-[40px]
+
+
 border
-border-white/15
-bg-gradient-to-br
-from-white/[0.14]
-via-white/[0.07]
-to-transparent
-backdrop-blur-2xl
-backdrop-saturate-150
-shadow-[0_20px_80px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.12)]
+
+border-white/20
+
+
+bg-[#111923]/80
+
+
 p-8
+
+
 transform-gpu
+
+
 transition-colors
-md:hover:border-white/30
+
+
+md:hover:border-white/60
+
+
 "
 
 >
@@ -810,23 +825,35 @@ duration:.6
 
 
 className="
-group
+
+mt-32
+
 relative
+
 overflow-hidden
-rounded-[35px]
+
+
+rounded-[50px]
+
+
 border
-border-white/15
-bg-gradient-to-br
-from-white/[0.14]
-via-white/[0.07]
-to-transparent
-backdrop-blur-2xl
-backdrop-saturate-150
-shadow-[0_20px_80px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.12)]
-p-8
+
+border-white/20
+
+
+
+bg-[#111923]/90
+
+
+
+p-10
+
+
+md:p-16
+
+
 transform-gpu
-transition-colors
-md:hover:border-white/30
+
 "
 
 >
