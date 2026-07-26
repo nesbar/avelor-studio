@@ -70,14 +70,8 @@ export default function Portfolio(){
       >
 
         <motion.div
-          initial={{
-            opacity:0,
-            x:-40
-          }}
-          whileInView={{
-            opacity:1,
-            x:0
-          }}
+          
+    
           viewport={{
             once:true
           }}
@@ -172,17 +166,7 @@ export default function Portfolio(){
             <motion.div
               key={project.title}
 
-              initial={{
-                opacity:0,
-                y:50,
-                scale:.96
-              }}
-
-              whileInView={{
-                opacity:1,
-                y:0,
-                scale:1
-              }}
+            
 
               viewport={{
                 once:true,
@@ -269,15 +253,7 @@ export default function Portfolio(){
               />
 
                             <motion.div
-                initial={{
-                  opacity:0,
-                  y:20
-                }}
-
-                whileInView={{
-                  opacity:1,
-                  y:0
-                }}
+                
 
                 viewport={{
                   once:true

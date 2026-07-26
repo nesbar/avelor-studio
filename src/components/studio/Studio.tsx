@@ -225,18 +225,7 @@ max-w-[1200px]
 <motion.div
 
 
-initial={{
 
-opacity:0
-
-}}
-
-
-whileInView={{
-
-opacity:1
-
-}}
 
 
 viewport={{
@@ -396,18 +385,6 @@ md:grid-cols-3
 key={item.title}
 
 
-initial={{
-
-opacity:0
-
-}}
-
-
-whileInView={{
-
-opacity:1
-
-}}
 
 
 viewport={{
@@ -538,13 +515,6 @@ text-white/60
 
 <motion.div
 
-initial={{
-opacity:0
-}}
-
-whileInView={{
-opacity:1
-}}
 
 viewport={{
 once:true,
@@ -643,14 +613,6 @@ lg:grid-cols-4
 key={item.name}
 
 
-initial={{
-opacity:0
-}}
-
-
-whileInView={{
-opacity:1
-}}
 
 
 viewport={{
@@ -826,13 +788,7 @@ text-white/50
 
 <motion.div
 
-initial={{
-opacity:0
-}}
 
-whileInView={{
-opacity:1
-}}
 
 viewport={{
 once:true,
@@ -929,16 +885,6 @@ md:grid-cols-2
 key={item.number}
 
 
-
-initial={{
-opacity:0
-}}
-
-
-
-whileInView={{
-opacity:1
-}}
 
 
 
@@ -1167,14 +1113,6 @@ text-white/50
 <motion.div
 
 
-initial={{
-opacity:0
-}}
-
-
-whileInView={{
-opacity:1
-}}
 
 
 viewport={{
