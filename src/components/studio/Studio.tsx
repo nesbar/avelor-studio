@@ -65,39 +65,35 @@ const cardStyle = `
 group
 relative
 overflow-hidden
-rounded-[40px]
+rounded-[45px]
 border
-border-white/20
-bg-[#111923]/80
+border-[#c49a5a]/25
+bg-gradient-to-br
 p-8
-transform-gpu
-transition-colors
-md:hover:border-white/50
-`;
+from-white/[0.14]
+via-white/[0.07]
+transition-all
+md:hover:border-[#c49a5a]/70
+`
+
+
 
 const glowStyle = `
-
 absolute
-
 right-[-80px]
-
 top-[-80px]
-
 h-[220px]
-
 w-[220px]
-
 rounded-full
-
 bg-[radial-gradient(circle,rgba(255,255,255,0.14)_0%,rgba(255,255,255,0.08)_35%,rgba(255,255,255,0)_75%)]
-
 pointer-events-none
-
 `;
 
 export default function Studio(){
 return(
+
 <section
+
 className="
 relative
 overflow-hidden
@@ -606,6 +602,7 @@ backdrop-blur-2xl
 transition-all
 hover:border-[#c49a5a]/70
 hover:shadow-[0_0_80px_rgba(196,154,90,0.2)]
+
 "
 
 >
