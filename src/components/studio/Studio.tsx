@@ -800,11 +800,10 @@ duration:.6
 
 
 className="
-group
+mt-32
 relative
-min-h-[260px]
 overflow-hidden
-rounded-[45px]
+rounded-[50px]
 border
 border-[#c49a5a]/25
 bg-gradient-to-br
