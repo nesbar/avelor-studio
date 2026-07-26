@@ -802,7 +802,7 @@ duration:.6
 className="
 group
 relative
-min-h-[260px]
+min-h-[500px]
 overflow-hidden
 rounded-[45px]
 border
