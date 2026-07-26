@@ -321,8 +321,10 @@ export default function Header(){
       <AnimatePresence>
 
         {open && (
-          
+      
          <motion.div
+
+         
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -358,7 +360,41 @@ export default function Header(){
 
           >
 
+<div
+  className="
+  absolute
+  inset-0
 
+  rounded-[36px]
+
+  border
+  border-white/[0.06]
+
+  pointer-events-none
+  "
+/>
+
+<div
+  className="
+  absolute
+
+  -top-24
+  left-1/2
+
+  h-72
+  w-72
+
+  -translate-x-1/2
+
+  rounded-full
+
+  bg-[#4D8DFF]/10
+
+  blur-[90px]
+
+  pointer-events-none
+  "
+/>
 
             <div
 
