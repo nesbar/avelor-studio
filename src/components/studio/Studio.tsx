@@ -67,55 +67,45 @@ relative
 overflow-hidden
 rounded-[40px]
 border
-border-white/15
-bg-gradient-to-br
-from-white/[0.14]
-via-white/[0.07]
-to-transparent
-backdrop-blur-2xl
-backdrop-saturate-150
-shadow-[0_20px_80px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.12)]
+border-white/20
+bg-[#111923]/80
 p-8
 transform-gpu
 transition-colors
-md:hover:border-white/30
+md:hover:border-white/50
 `;
 
 const glowStyle = `
 
 absolute
+
 right-[-80px]
+
 top-[-80px]
+
 h-[220px]
+
 w-[220px]
+
 rounded-full
+
 bg-[radial-gradient(circle,rgba(255,255,255,0.14)_0%,rgba(255,255,255,0.08)_35%,rgba(255,255,255,0)_75%)]
+
 pointer-events-none
+
 `;
 
 export default function Studio(){
 return(
 <section
-
 className="
-group
 relative
-min-h-[260px]
 overflow-hidden
-rounded-[45px]
-border
-border-[#c49a5a]/25
-bg-gradient-to-br
-from-white/[0.14]
-via-white/[0.07]
-to-transparent
-p-10
-backdrop-blur-2xl
-transition-all
-hover:border-[#c49a5a]/70
-hover:shadow-[0_0_80px_rgba(196,154,90,0.2)]
+bg-transparent
+px-6
+py-32
+md:px-12
 "
-
 >
 
 <div
@@ -379,20 +369,15 @@ delay:index*.05
 className="
 group
 relative
-min-h-[260px]
 overflow-hidden
-rounded-[45px]
+rounded-[35px]
 border
-border-[#c49a5a]/25
-bg-gradient-to-br
-from-white/[0.14]
-via-white/[0.07]
-to-transparent
-p-10
-backdrop-blur-2xl
-transition-all
-hover:border-[#c49a5a]/70
-hover:shadow-[0_0_80px_rgba(196,154,90,0.2)]
+border-white/20
+bg-[#111923]/80
+p-8
+transform-gpu
+transition-colors
+md:hover:border-white/50
 "
 
 >
@@ -406,7 +391,8 @@ top-[-70px]
 h-[220px]
 w-[220px]
 rounded-full
-bg-[radial-gradient(circle,rgba(255,255,255,0.14)_0%,rgba(255,255,255,0.08)_35%,rgba(255,255,255,0)_75%)]
+bg-white/10
+blur-[70px]
 pointer-events-none
 "
 
@@ -599,23 +585,39 @@ delay:index*.05
 
 
 className="
+
 group
+
 relative
-min-h-[260px]
+
 overflow-hidden
-rounded-[45px]
+
+
+rounded-[40px]
+
+
 border
-border-[#c49a5a]/25
-bg-gradient-to-br
-from-white/[0.14]
-via-white/[0.07]
-to-transparent
-p-10
-backdrop-blur-2xl
-transition-all
-hover:border-[#c49a5a]/70
-hover:shadow-[0_0_80px_rgba(196,154,90,0.2)]
+
+border-white/20
+
+
+bg-[#111923]/80
+
+
+p-8
+
+
+transform-gpu
+
+
+transition-colors
+
+
+md:hover:border-white/60
+
+
 "
+
 >
 
 
@@ -643,7 +645,7 @@ rounded-full
 bg-white/10
 
 
-radial-gradient
+blur-[70px]
 
 
 pointer-events-none
@@ -808,16 +810,35 @@ duration:.6
 
 
 className="
+
 mt-32
+
 relative
+
 overflow-hidden
+
+
 rounded-[50px]
+
+
 border
+
 border-white/20
+
+
+
 bg-[#111923]/90
+
+
+
 p-10
+
+
 md:p-16
+
+
 transform-gpu
+
 "
 
 >
@@ -827,14 +848,31 @@ transform-gpu
 <div
 
 className="
+
 absolute
+
 right-[-150px]
+
 top-[-150px]
+
+
 h-[350px]
+
+
 w-[350px]
+
+
 rounded-full
-bg-[radial-gradient(circle,rgba(214,168,95,0.18)_0%,rgba(214,168,95,0.08)_45%,rgba(214,168,95,0)_80%)]
+
+
+bg-[#D6A85F]/15
+
+
+blur-[90px]
+
+
 pointer-events-none
+
 "
 
 />
@@ -846,14 +884,32 @@ pointer-events-none
 <div
 
 className="
+
 absolute
+
 left-[-120px]
+
+
 bottom-[-120px]
+
+
 h-[280px]
+
+
 w-[280px]
+
+
 rounded-full
-bg-[radial-gradient(circle,rgba(255,255,255,0.10)_0%,rgba(255,255,255,0.04)_40%,rgba(255,255,255,0)_80%)]
+
+
+bg-white/[0.05]
+
+
+blur-[80px]
+
+
 pointer-events-none
+
 "
 
 />
