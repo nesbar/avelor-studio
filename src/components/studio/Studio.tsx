@@ -69,13 +69,14 @@ rounded-[45px]
 border
 border-[#c49a5a]/25
 bg-gradient-to-br
-p-8
+p-10
 from-white/[0.14]
 via-white/[0.07]
+backdrop-blur-2xl
 transition-all
 md:hover:border-[#c49a5a]/70
+hover:shadow-[0_0_80px_rgba(196,154,90,0.2)]
 `
-
 
 
 const glowStyle = `
