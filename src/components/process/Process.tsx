@@ -224,27 +224,18 @@ className="
 group
 relative
 min-h-[260px]
-
 overflow-hidden
-
 rounded-[45px]
-
 border
 border-[#c49a5a]/25
-
 bg-gradient-to-br
 from-white/[0.14]
 via-white/[0.07]
 to-transparent
-
 p-10
-
 backdrop-blur-2xl
-
 transition-all
-
 hover:border-[#c49a5a]/70
-
 hover:shadow-[0_0_80px_rgba(196,154,90,0.2)]
 "
 
