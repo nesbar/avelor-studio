@@ -802,9 +802,9 @@ duration:.6
 className="
 group
 relative
-min-h-[500px]
+min-h-[260px]
 overflow-hidden
-rounded-[45px]
+rounded-[100px]
 border
 border-[#c49a5a]/25
 bg-gradient-to-br
