@@ -320,45 +320,41 @@ export default function Header(){
 
       <AnimatePresence>
 
-
         {open && (
+          
+         <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
 
-          <motion.div
-
-            initial={{
-              opacity:0,
-              y:-20,
-            }}
-
-            animate={{
-              opacity:1,
-              y:0,
-            }}
-
-            exit={{
-              opacity:0,
-              y:-20,
-            }}
-
-            className="
+          className="
             absolute
-            left-5
-            right-5
-            top-[80px]
+            left-6
+            right-6
+            top-[88px]
 
-            rounded-[35px]
+            overflow-hidden
+
+            rounded-[36px]
 
             border
-            border-white/10
+            border-white/[0.08]
 
-            bg-[#08111f]/90
+            bg-gradient-to-br
+            from-white/[0.08]
+            via-[#08111f]/85
+            to-[#07131F]/90
+
+            backdrop-blur-2xl
+            backdrop-saturate-150
+
+            shadow-[0_30px_80px_rgba(0,0,0,0.45)]
 
             p-8
 
-            backdrop-blur-xl
-
             lg:hidden
-            "
+          "
+      
 
           >
 
@@ -384,8 +380,9 @@ export default function Header(){
 
                   className="
                   text-left
-                  text-[11px]
-                  tracking-[0.4em]
+                  text-[13px]
+                  tracking-[0.28em]
+                  font-light
                   text-white/70
                   "
 
