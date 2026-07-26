@@ -330,31 +330,28 @@ export default function Header(){
           exit={{ opacity: 0 }}
 
           className="
-            absolute
-            left-6
-            right-6
-            top-[88px]
+          absolute
+          left-6
+          right-6
+          top-[88px]
 
-            overflow-hidden
+          overflow-hidden
 
-            rounded-[36px]
+          rounded-[36px]
 
-            border
-            border-white/[0.08]
+          border
+          border-white/10
 
-            bg-gradient-to-br
-            from-white/[0.12]
-            via-[#08111f]/60
-            to-[#07131F]/65
+          bg-white/[0.05]
 
-            backdrop-blur-3xl
-            backdrop-saturate-200
+          backdrop-blur-[30px]
+          backdrop-saturate-200
 
-            shadow-[0_30px_80px_rgba(0,0,0,0.45)]
+          shadow-[0_20px_60px_rgba(0,0,0,0.35)]
 
-            p-8
+          p-8
 
-            lg:hidden
+          lg:hidden
           "
       
 
