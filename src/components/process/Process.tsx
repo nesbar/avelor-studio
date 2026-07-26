@@ -1,143 +1,75 @@
 "use client";
 
 import { motion } from "framer-motion";
-import ContactForm from "@/components/ContactForm";
+
+import {
+  Lightbulb,
+  Palette,
+  Code2,
+  Rocket,
+} from "lucide-react";
 
 
-const values = [
-  {
-    title:"ИДЕИ",
-    text:"Создаём не просто проекты, а цифровые миры с характером.",
-  },
-  {
-    title:"ТЕХНОЛОГИИ",
-    text:"Используем современные инструменты разработки и дизайна.",
-  },
-  {
-    title:"КАЧЕСТВО",
-    text:"Каждая деталь проходит этапы проверки и улучшения.",
-  },
-];
 
+const steps = [
 
-const technologies = [
-  {
-    name:"NEXT.JS",
-    text:"Современная веб-разработка",
-  },
-  {
-    name:"UNITY",
-    text:"Разработка игровых проектов",
-  },
-  {
-    name:"BLENDER",
-    text:"3D модели и визуализация",
-  },
-  {
-    name:"FIGMA",
-    text:"UI / UX дизайн",
-  },
-];
-
-
-const process = [
   {
     number:"01",
     title:"ИДЕЯ",
-    text:"Изучаем задачу, цели проекта и создаём направление.",
+    tag:"DISCOVERY",
+    text:"Изучаем задачу, аудиторию и формируем направление проекта.",
+    icon:Lightbulb,
   },
+
   {
     number:"02",
     title:"КОНЦЕПЦИЯ",
-    text:"Разрабатываем структуру, стиль и визуальную систему.",
+    tag:"CONCEPT",
+    text:"Создаём структуру, стиль и визуальную систему продукта.",
+    icon:Palette,
   },
+
   {
     number:"03",
     title:"РАЗРАБОТКА",
-    text:"Превращаем концепцию в полноценный цифровой продукт.",
+    tag:"CREATION",
+    text:"Превращаем идею в полноценный цифровой продукт.",
+    icon:Code2,
   },
+
   {
     number:"04",
     title:"ЗАПУСК",
-    text:"Публикуем проект и продолжаем его развитие.",
+    tag:"LAUNCH",
+    text:"Запускаем проект и продолжаем его развитие.",
+    icon:Rocket,
   },
+
 ];
 
 
 
-const cardClass = `
-group
-relative
-overflow-hidden
-
-rounded-[40px]
-
-border
-border-white/20
-
-bg-[#111923]/90
-
-p-8
-
-transform-gpu
-
-transition-colors
-
-md:hover:border-white/50
-`;
 
 
-
-export default function Studio(){
+export default function Process(){
 
 
 return (
 
 <section
 
+id="process"
+
 className="
 relative
 overflow-hidden
-
 bg-transparent
-
 px-6
-
-py-32
-
+py-8
 md:px-12
-
 "
 
 >
-
-
-<div
-
-className="
-absolute
-
-left-1/2
-
-top-0
-
-h-[450px]
-
-w-[450px]
-
--translate-x-1/2
-
-rounded-full
-
-bg-white/[0.05]
-
-blur-[100px]
-
-pointer-events-none
-
-"
-
- />
 
 
 
@@ -145,35 +77,28 @@ pointer-events-none
 
 className="
 relative
-
 z-10
-
 mx-auto
-
-max-w-[1200px]
-
+max-w-[1400px]
 "
 
 >
 
 
-<motion.div
 
-initial={{
-opacity:0
-}}
 
-whileInView={{
-opacity:1
-}}
 
-viewport={{
-once:true
-}}
 
-transition={{
-duration:.6
-}}
+
+{/* заголовок */}
+
+
+
+<div
+
+className="
+mb-16
+"
 
 >
 
@@ -182,155 +107,177 @@ duration:.6
 
 className="
 text-[11px]
-
-tracking-[0.6em]
-
-text-[#D6A85F]
-
+tracking-[0.7em]
+text-[#b08a52]
 "
 
 >
 
-ABOUT AVELOR
+КАК МЫ РАБОТАЕМ
 
 </p>
 
 
 
-<h1
+
+
+<h2
 
 className="
-mt-8
-
-text-5xl
-
+mt-6
+max-w-[700px]
+text-4xl
 font-light
-
 leading-tight
-
 text-white
 
-md:text-7xl
-
+md:text-5xl
 "
 
 >
 
-СОЗДАЁМ
+От идеи до готового
+цифрового продукта
 
-<br/>
-
-<span className="text-[#D6A85F]">
-
-ЦИФРОВЫЕ
-
-</span>
-
-<br/>
-
-МИРЫ
-
-</h1>
+</h2>
 
 
 
-<p
-
-className="
-mt-10
-
-max-w-[600px]
-
-text-lg
-
-leading-8
-
-text-white/60
-
-"
-
->
-
-Avelor Studio — цифровая студия,
-которая объединяет разработку,
-дизайн и технологии для создания
-современных продуктов.
-
-</p>
+</div>
 
 
-</motion.div>
 
 
+
+
+
+
+
+{/* этапы */}
 
 
 
 <div
 
 className="
-mt-24
-
 grid
-
+grid-cols-1
 gap-8
 
-md:grid-cols-3
-
+md:grid-cols-2
 "
 
 >
 
 
-{values.map((item,index)=>(
+{
+
+steps.map((step,index)=>{
+
+
+const Icon = step.icon;
+
+
+
+return (
 
 
 <motion.div
 
-key={item.title}
+
+
+
+key={step.number}
+
 
 
 initial={{
-opacity:0
+
+opacity:0,
+y:50
+
 }}
+
+
 
 whileInView={{
-opacity:1
+
+opacity:1,
+y:0
+
 }}
+
+
 
 viewport={{
-once:true,
-amount:.2
+
+once:true
+
 }}
+
+
 
 transition={{
-duration:.5,
-delay:index*.05
+
+duration:.7,
+delay:index*.1
+
 }}
 
 
-className={cardClass}
+
+whileHover={{
+
+y:-12
+
+}}
+
+
+
+className="
+group
+relative
+min-h-[260px]
+
+overflow-hidden
+
+rounded-[45px]
+
+border
+border-[#c49a5a]/25
+
+bg-gradient-to-br
+from-white/[0.14]
+via-white/[0.07]
+to-transparent
+
+p-10
+
+backdrop-blur-2xl
+
+transition-all
+
+hover:border-[#c49a5a]/70
+
+hover:shadow-[0_0_80px_rgba(196,154,90,0.2)]
+"
 
 >
+
 
 
 <div
 
 className="
 absolute
+inset-0
 
-right-[-70px]
+rounded-[inherit]
 
-top-[-70px]
+border
+border-white/20
 
-h-[220px]
-
-w-[220px]
-
-rounded-full
-
-bg-white/10
-
-blur-[70px]
+shadow-[inset_0_0_40px_rgba(255,255,255,0.12)]
 
 pointer-events-none
 
@@ -340,63 +287,287 @@ pointer-events-none
 
 
 
+{/* внутреннее свечение */}
+
+
+
+<div
+
+className="
+absolute
+right-[-80px]
+top-[-80px]
+h-[250px]
+w-[250px]
+rounded-full
+
+bg-[#b08a52]/20
+
+blur-[90px]
+
+opacity-0
+
+transition
+duration-500
+
+group-hover:opacity-100
+
+"
+
+/>
+
+
+
+
+
+
+
+
+
 <div
 
 className="
 relative
-
 z-10
-
+flex
+justify-between
 "
 
 >
 
 
-<h3
+
+
+
+<div>
+
+
+
+
+
+
+<div
 
 className="
-text-sm
+flex
+h-14
+w-14
+items-center
+justify-center
 
-tracking-[0.35em]
+rounded-2xl
 
-text-[#D6A85F]
+bg-[#b08a52]/10
+
+border
+
+border-[#b08a52]/30
 
 "
 
 >
 
-{item.title}
 
-</h3>
+<Icon
+
+size={28}
+
+strokeWidth={1}
+
+className="
+text-[#b08a52]
+"
+
+/>
+
+
+</div>
+
+
+
+
 
 
 
 <p
 
 className="
-mt-6
+mt-8
+text-[10px]
 
-leading-7
+tracking-[0.6em]
 
-text-white/60
+text-[#b08a52]
 
 "
 
 >
 
-{item.text}
+{step.tag}
 
 </p>
 
 
+
+
+
+
+
+<h3
+
+className="
+mt-4
+
+text-3xl
+
+font-light
+
+text-white
+
+"
+
+>
+
+{step.title}
+
+</h3>
+
+
+
+
+
+
+
+<p
+
+className="
+mt-5
+
+max-w-[400px]
+
+text-sm
+
+leading-7
+
+text-white/50
+
+"
+
+>
+
+{step.text}
+
+</p>
+
+
+
+
+
+
 </div>
+
+
+
+
+
+
+
+
+<div
+
+className="
+text-[120px]
+font-light
+leading-none
+
+text-white/[0.04]
+
+"
+
+>
+
+{step.number}
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+{/* линия */}
+
+
+
+<div
+
+className="
+absolute
+bottom-0
+left-0
+
+h-[3px]
+
+w-0
+
+bg-[#b08a52]
+
+transition-all
+
+duration-700
+
+group-hover:w-full
+
+"
+
+/>
+
+
+
+
+
 
 
 </motion.div>
 
 
-))}
+)
+
+
+})
+
+
+}
+
 
 
 </div>
 
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</section>
+
+);
+
+}
