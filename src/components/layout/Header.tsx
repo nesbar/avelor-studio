@@ -343,12 +343,12 @@ export default function Header(){
             border-white/[0.08]
 
             bg-gradient-to-br
-            from-white/[0.08]
-            via-[#08111f]/85
-            to-[#07131F]/90
+            from-white/[0.12]
+            via-[#08111f]/60
+            to-[#07131F]/65
 
-            backdrop-blur-2xl
-            backdrop-saturate-150
+            backdrop-blur-3xl
+            backdrop-saturate-200
 
             shadow-[0_30px_80px_rgba(0,0,0,0.45)]
 
@@ -360,41 +360,42 @@ export default function Header(){
 
           >
 
-<div
-  className="
-  absolute
-  inset-0
+            <div
+              className="
+              absolute
+              inset-0
 
-  rounded-[36px]
+              rounded-[36px]
 
-  border
-  border-white/[0.06]
+              border
+              border-white/[0.06]
 
-  pointer-events-none
-  "
-/>
+              pointer-events-none
+              "
+            />
 
-<div
-  className="
-  absolute
 
-  -top-24
-  left-1/2
+            <div
+              className="
+              absolute
 
-  h-72
-  w-72
+              -top-24
+              left-1/2
 
-  -translate-x-1/2
+              h-72
+              w-72
 
-  rounded-full
+              -translate-x-1/2
 
-  bg-[#4D8DFF]/10
+              rounded-full
 
-  blur-[90px]
+              bg-[#4D8DFF]/10
 
-  pointer-events-none
-  "
-/>
+              blur-[90px]
+
+              pointer-events-none
+              "
+            />
 
             <div
 
