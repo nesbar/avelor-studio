@@ -800,35 +800,22 @@ duration:.6
 
 
 className="
-
-mt-32
-
+group
 relative
-
+min-h-[260px]
 overflow-hidden
-
-
-rounded-[50px]
-
-
+rounded-[45px]
 border
-
-border-white/20
-
-
-
-bg-[#111923]/90
-
-
-
+border-[#c49a5a]/25
+bg-gradient-to-br
+from-white/[0.14]
+via-white/[0.07]
+to-transparent
 p-10
-
-
-md:p-16
-
-
-transform-gpu
-
+backdrop-blur-2xl
+transition-all
+hover:border-[#c49a5a]/70
+hover:shadow-[0_0_80px_rgba(196,154,90,0.2)]
 "
 
 >
